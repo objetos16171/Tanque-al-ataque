@@ -1,9 +1,9 @@
 #Greenfoot properties
-#Sun Nov 06 14:19:58 CST 2016
+#Sun Nov 06 14:36:20 CST 2016
 class.Casa_1.superclass=greenfoot.Actor
 class.Casa_1.image=14958125_10210650358676741_31510664_o.png
 mainWindow.width=850
-class.Tanque.image=Tanque perron.jpg
+class.Tanque.image=14996533_10210652582172327_1792932913_n.png
 class.TanqueWorld.superclass=greenfoot.World
 class.Jefe.superclass=greenfoot.Actor
 class.MyWorld.superclass=greenfoot.World
