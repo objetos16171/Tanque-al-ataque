@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Sun Nov 06 09:38:32 CST 2016
+#Sun Nov 06 14:10:49 CST 2016
 mainWindow.width=850
 class.Tanque.image=Tanque perron.jpg
 class.TanqueWorld.superclass=greenfoot.World
@@ -7,7 +7,7 @@ class.MyWorld.superclass=greenfoot.World
 project.charset=UTF-8
 version=2.8.0
 world.lastInstantiated=TanqueWorld
-class.Tanque.superclass=greenfoot.Actor
 mainWindow.y=40
+class.Tanque.superclass=greenfoot.Actor
 mainWindow.x=40
 mainWindow.height=600
