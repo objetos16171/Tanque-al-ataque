@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Mon Nov 07 09:44:25 CST 2016
+#Mon Nov 07 10:23:01 CST 2016
 class.Torreta.image=14971853_10210652582052324_1008064390_n.png
 target4.type=ClassTarget
 <<<<<<<=HEAD
@@ -13,10 +13,12 @@ class.Sadado.superclass=greenfoot.Actor
 editor.fx.0.width=700
 target1.height=50
 target3.typeParameters=
+class.TanqueWorld.image=corkboard.jpg
 mainWindow.width=1382
 >>>>>>>=origin/master
 target2.width=80
 class.Torreta.superclass=greenfoot.Actor
+class.BalaShark.superclass=greenfoot.Actor
 version=2.8.0
 class.TanqueWorld.superclass=greenfoot.World
 dependency1.to=Casa_1
@@ -28,6 +30,7 @@ target2.typeParameters=
 target3.showInterface=false
 class.Casa_1.superclass=greenfoot.Actor
 target1.showInterface=false
+class.BalaShark.image=14923171_10210650358636740_1665686373_o.png
 package.numTargets=4
 class.Casa_2.image=14958219_10210650358756743_1524195985_o.png
 target1.type=ClassTarget
