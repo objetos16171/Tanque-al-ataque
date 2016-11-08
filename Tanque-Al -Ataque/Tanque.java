@@ -22,20 +22,20 @@ public class Tanque extends Actor
         
         if(Greenfoot.isKeyDown("left")){
            
-          setRotation(-45);
-          //move(-3);
+          setRotation(-90);
+          setLocation(getX()-3,getY());
           
         }
         if(Greenfoot.isKeyDown("right")){
-           setRotation(45);
-           //move(3);
+           setRotation(90);
+           setLocation(getX()+3,getY());
         } 
         if(Greenfoot.isKeyDown("up")){
             setRotation(0);
            setLocation(getX(),getY()-3);
         }
         if(Greenfoot.isKeyDown("down")){
-            setRotation(0);
+            setRotation(180);
            setLocation(getX(),getY()+3);
         }
     }

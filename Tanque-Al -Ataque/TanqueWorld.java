@@ -20,13 +20,9 @@ public class TanqueWorld extends World
         
         Tanque T1 = new Tanque();
         
-        Casa1 c= new Casa1();
-        Casa1 c2= new Casa1();
-        Casa1 c3= new Casa1();
+       
         
-        addObject(c,50,50);
-        addObject(c2,50+50,50);
-        addObject(c3,50+100,50);
+        
        
         addObject(T1,390,550);
         

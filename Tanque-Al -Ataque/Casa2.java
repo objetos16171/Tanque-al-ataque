@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Casa2 extends Casa
+public class Casa2 extends Objeto
 {
     /**
      * Act - do whatever the Casa2 wants to do. This method is called whenever
