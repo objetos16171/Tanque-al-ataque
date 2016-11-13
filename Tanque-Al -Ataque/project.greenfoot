@@ -2,6 +2,11 @@
 =\=\=\=\=\=\=
 <<<<<<<=HEAD
 >>>>>>>=origin/master
+<<<<<<< HEAD
+=======
+class.Bala.image=14997119_10210650358476736_1054016645_n.png
+class.Bala.superclass=greenfoot.Actor
+>>>>>>> origin/master
 class.Casa1.image=14958125_10210650358676741_31510664_o.png
 class.Casa1.superclass=Objeto
 class.Casa2.image=14958219_10210650358756743_1524195985_o.png
@@ -29,6 +34,18 @@ dependency1.type=UsesDependency
 dependency2.from=TanqueWorld
 dependency2.to=Casa1
 dependency2.type=UsesDependency
+<<<<<<< HEAD
+=======
+dependency3.from=Tanque
+dependency3.to=TanqueWorld
+dependency3.type=UsesDependency
+dependency4.from=TanqueWorld
+dependency4.to=Bala
+dependency4.type=UsesDependency
+dependency5.from=Bala
+dependency5.to=TanqueWorld
+dependency5.type=UsesDependency
+>>>>>>> origin/master
 editor.fx.0.height=700
 editor.fx.0.width=700
 editor.fx.0.x=0
@@ -41,8 +58,13 @@ mainWindow.height=735
 mainWindow.width=1378
 mainWindow.x=-7
 mainWindow.y=0
+<<<<<<< HEAD
 package.numDependencies=2
 package.numTargets=11
+=======
+package.numDependencies=5
+package.numTargets=12
+>>>>>>> origin/master
 project.charset=UTF-8
 readme.height=58
 readme.name=@README
@@ -58,21 +80,45 @@ target1.width=80
 target1.x=110
 target1.y=10
 target10.height=50
+<<<<<<< HEAD
 target10.name=Objeto
+=======
+target10.name=Enemigos
+>>>>>>> origin/master
 target10.showInterface=false
 target10.type=ClassTarget
 target10.typeParameters=
 target10.width=80
+<<<<<<< HEAD
 target10.x=100
 target10.y=190
 target11.height=50
 target11.name=Palmera
+=======
+target10.x=10
+target10.y=130
+target11.height=50
+target11.name=Casa2
+>>>>>>> origin/master
 target11.showInterface=false
 target11.type=ClassTarget
 target11.typeParameters=
 target11.width=80
+<<<<<<< HEAD
 target11.x=190
 target11.y=190
+=======
+target11.x=100
+target11.y=130
+target12.height=50
+target12.name=Palmera
+target12.showInterface=false
+target12.type=ClassTarget
+target12.typeParameters=
+target12.width=80
+target12.x=190
+target12.y=190
+>>>>>>> origin/master
 target2.height=50
 target2.name=JefeFinal
 target2.showInterface=false
@@ -90,6 +136,7 @@ target3.width=80
 target3.x=10
 target3.y=190
 target4.height=50
+<<<<<<< HEAD
 target4.name=Soldado
 target4.showInterface=false
 target4.type=ClassTarget
@@ -99,10 +146,22 @@ target4.x=190
 target4.y=130
 target5.height=50
 target5.name=Casa1
+=======
+target4.name=TanqueWorld
+target4.showInterface=false
+target4.type=ClassTarget
+target4.typeParameters=
+target4.width=100
+target4.x=70
+target4.y=70
+target5.height=50
+target5.name=arbusto
+>>>>>>> origin/master
 target5.showInterface=false
 target5.type=ClassTarget
 target5.typeParameters=
 target5.width=80
+<<<<<<< HEAD
 target5.x=180
 target5.y=70
 target6.height=50
@@ -115,27 +174,60 @@ target6.x=70
 target6.y=70
 target7.height=50
 target7.name=arbusto
+=======
+target5.x=10
+target5.y=250
+target6.height=50
+target6.name=Bala
+target6.showInterface=false
+target6.type=ClassTarget
+target6.typeParameters=
+target6.width=80
+target6.x=100
+target6.y=250
+target7.height=50
+target7.name=Objeto
+>>>>>>> origin/master
 target7.showInterface=false
 target7.type=ClassTarget
 target7.typeParameters=
 target7.width=80
+<<<<<<< HEAD
 target7.x=10
 target7.y=250
 target8.height=50
 target8.name=Enemigos
+=======
+target7.x=100
+target7.y=190
+target8.height=50
+target8.name=Soldado
+>>>>>>> origin/master
 target8.showInterface=false
 target8.type=ClassTarget
 target8.typeParameters=
 target8.width=80
+<<<<<<< HEAD
 target8.x=10
 target8.y=130
 target9.height=50
 target9.name=Casa2
+=======
+target8.x=190
+target8.y=130
+target9.height=50
+target9.name=Casa1
+>>>>>>> origin/master
 target9.showInterface=false
 target9.type=ClassTarget
 target9.typeParameters=
 target9.width=80
+<<<<<<< HEAD
 target9.x=100
 target9.y=130
+=======
+target9.x=180
+target9.y=70
+>>>>>>> origin/master
 version=2.8.0
 world.lastInstantiated=TanqueWorld
