@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Tanque extends Actor
 {
+    private int i=0;
     /**
      * Act - do whatever the Tanque wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -15,29 +16,54 @@ public class Tanque extends Actor
     public void act() 
     {
         Muevete();
+        Dispara();
     }   
     
+    /**
+     * Este metodo hace mover al Tanque
+     */
     public void Muevete()
     {
-        
+        TanqueWorld mundo = (TanqueWorld) getWorld();
         if(Greenfoot.isKeyDown("left")){
-           
-          setRotation(-90);
-          setLocation(getX()-3,getY());
+          setRotation(-45);
           
+          i=2;
+          setLocation(getX()-3,getY());
         }
         if(Greenfoot.isKeyDown("right")){
-           setRotation(90);
+           setRotation(45);
+           i=1;
            setLocation(getX()+3,getY());
         } 
         if(Greenfoot.isKeyDown("up")){
-            setRotation(0);
+           setRotation(0);
+           i=3;
            setLocation(getX(),getY()-3);
         }
         if(Greenfoot.isKeyDown("down")){
-            setRotation(180);
+            //setRotation(180);
            setLocation(getX(),getY()+3);
            
         }
+        
     }
+    
+    public void Dispara()
+    {
+         TanqueWorld mundo = (TanqueWorld) getWorld();
+        if(Greenfoot.isKeyDown("z")){
+            
+            mundo.DisparaT();
+            switch (i)
+            {
+                case 1: mundo.Rotation1();
+                break;
+                case 2: mundo.Rotation2();
+                break;
+                case 3: mundo.Rotation3();
+            }
+          }
+    }
+    
 }
