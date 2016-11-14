@@ -20,7 +20,7 @@ public class Tanque extends Actor
     }   
     
     /**
-     * Este metodo hace mover al Tanque
+     * Este metodo hace mover al Tanque al igual que lo hace rotar
      */
     public void Muevete()
     {
@@ -48,7 +48,9 @@ public class Tanque extends Actor
         }
         
     }
-    
+    /**
+     * este metodo es el encargado de hacer dipoarar el metodo
+     */
     public void Dispara()
     {
          TanqueWorld mundo = (TanqueWorld) getWorld();

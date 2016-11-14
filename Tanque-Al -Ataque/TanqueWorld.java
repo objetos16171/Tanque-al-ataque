@@ -135,13 +135,19 @@ public class TanqueWorld extends World
         return Help;
     }
 
+   /**
+    * este metodo es el encargado de hacer dinparar al tanque
+    */
     
     public void DisparaT()
     {
         B.setLocation(T1.getX(),T1.getY()-100);
         addObject(B,T1.getX(),T1.getY()-100);
     }
-
+   /**
+    * los metodos rotation hacen rotar la bala con forme la rotation del 
+    * tanque
+    */
     public void Rotation1()
     { 
         i=1;

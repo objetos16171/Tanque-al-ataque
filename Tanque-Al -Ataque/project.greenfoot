@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Mon Nov 14 09:07:27 CST 2016
+#Mon Nov 14 10:16:57 CST 2016
 editor.fx.0.height=700
 target2.width=80
 target8.name=Button
@@ -86,7 +86,7 @@ dependency9.from=TanqueWorld
 readme.name=@README
 class.TanqueWorld.superclass=greenfoot.World
 target13.typeParameters=
-editor.swing.0.width=700
+editor.swing.0.width=701
 target6.name=Bala
 target9.height=50
 target12.y=130
@@ -177,7 +177,7 @@ dependency4.to=Bala
 class.Casa2.superclass=Objeto
 class.Tanque.superclass=greenfoot.Actor
 target4.name=TanqueWorld
-class.Bala.image=14997119_10210650358476736_1054016645_n.png
+class.Bala.image=tiburon.png
 readme.y=10
 readme.x=10
 target4.height=50
