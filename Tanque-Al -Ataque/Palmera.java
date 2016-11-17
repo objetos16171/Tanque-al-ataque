@@ -14,6 +14,13 @@ public class Palmera extends Objeto
      */
     public void act() 
     {
-        // Add your action code here.
+       if(Greenfoot.isKeyDown("up")){
+        setLocation(getX(),getY()+5);}
+       
+        if( getY()== 599 )
+        {
+            setLocation(400 +Greenfoot.getRandomNumber(200),0);
+            removeTouching(Palmera.class);
     }    
+   }
 }

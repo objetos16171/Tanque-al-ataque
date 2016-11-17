@@ -14,6 +14,6 @@ public class Torreta extends Enemigos
      */
     public void act() 
     {
-        // Add your action code here.
+      setRotation(45);
     }    
 }

@@ -8,13 +8,8 @@ comment10.params=
 comment10.target=Button\ getAyuda()
 comment10.text=\r\n\ Este\ m\u00E9todo\ regresa\ un\ objeto\ en\ especifico\ de\ la\ clase\ Boton.\r\n\ \r\n\ @return\ Boton\ -\ Objeto\ record\ de\ la\ clase\ Boton.\r\n
 comment11.params=
-<<<<<<< HEAD
 comment11.target=void\ DisparaT()
 comment11.text=\r\n\ este\ metodo\ es\ el\ encargado\ de\ hacer\ dinparar\ al\ tanque\r\n
-=======
-comment11.target=void\ Rotation1()
-comment11.text=\r\n\ los\ metodos\ rotation\ hacen\ rotar\ la\ bala\ con\ forme\ la\ rotation\ del\ \r\n\ tanque\r\n
->>>>>>> origin/master
 comment12.params=
 comment12.target=void\ Rotation1()
 comment12.text=\r\n\ los\ metodos\ rotation\ hacen\ rotar\ la\ bala\ con\ forme\ la\ rotation\ del\ \r\n\ tanque\r\n
@@ -25,10 +20,10 @@ comment14.target=void\ Rotation3()
 comment15.params=
 comment15.target=int\ returnJ()
 comment16.params=
-comment16.target=void\ prepare()
+comment16.target=void\ escenario1()
 comment16.text=\r\n\ Prepare\ the\ world\ for\ the\ start\ of\ the\ program.\r\n\ That\ is\:\ create\ the\ initial\ objects\ and\ add\ them\ to\ the\ world.\r\n
 comment17.params=
-comment17.target=void\ escenario1()
+comment17.target=void\ escenario2()
 comment2.params=
 comment2.target=void\ menu()
 comment3.params=

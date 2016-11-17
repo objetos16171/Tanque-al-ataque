@@ -15,6 +15,13 @@ public class Casa1 extends Objeto
      */
     public void act() 
     {
-        // Add your action code here.
+     if(Greenfoot.isKeyDown("up")){
+        setLocation(getX(),getY()+5);}
+       
+        if( getY()== 599 )
+        {
+            setLocation(Greenfoot.getRandomNumber(200),0);
+            removeTouching(Casa1.class);
     }    
+   }
 }

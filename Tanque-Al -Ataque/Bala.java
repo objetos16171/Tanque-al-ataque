@@ -30,6 +30,11 @@ public class Bala extends Actor
             break;
         }
         
+        if(getX()==0||getY()==0||getX()==800){
+           removeTouching(Bala.class);
+        
+        }                                   
+        
         Mata();
     }
     
