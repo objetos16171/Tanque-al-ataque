@@ -25,8 +25,8 @@ public class TanqueWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 600, 1); 
-         imagenes = new LinkedList();
-        
+        imagenes = new LinkedList();
+
         imagenes.add(new GreenfootImage("Menu.jpg"));      //0
         imagenes.add(new GreenfootImage("Help.png"));      //1
         imagenes.add(new GreenfootImage("Start.png")); //2
@@ -36,9 +36,9 @@ public class TanqueWorld extends World
         Start = new Button(getImagen(2));
         Help = new Button(getImagen(1));
         Salir = new Button(getImagen(3));
-               
+
         menu();
-        
+       
     }
     
     public void menu()
@@ -59,14 +59,33 @@ public class TanqueWorld extends World
     }
     
     /**
-     * Metodo encargado de crear el nivel con
+     * Metodo encargado de crear el nivel 1 con
      * el fondo determinado y el actor principal
+     * y el escenario
      */
     public void level1()
     {
         setBackground(getImagen(4));
         addObject(T1,390,550);
         prepare();
+        
+        /*if()
+        {
+            level2();
+        }*/
+    }
+    
+     /**
+     * Metodo encargado de crear el nivel 2 con
+     * el fondo determinado y el actor principal
+     * y el escenario
+     */
+    
+    public void level2()
+    {
+        setBackground(getImagen(4));
+        addObject(T1,390,550); 
+        escenario1();
     }
     
      public void Help()
@@ -91,7 +110,7 @@ public class TanqueWorld extends World
         
         if(Greenfoot.mouseClicked(Start)) {
             removeObjects(getObjects(null));
-            level1();
+            level2();
         }
         
          if(Greenfoot.mouseClicked(Help)) {
@@ -188,6 +207,7 @@ public class TanqueWorld extends World
      */
     private void prepare()
     {
+        
         Palmera palmera = new Palmera();
         addObject(palmera,658,199);
         Palmera palmera2 = new Palmera();
@@ -294,7 +314,14 @@ public class TanqueWorld extends World
         torreta3.setLocation(143,281);
         palmera4.setLocation(67,168);
         casa28.setLocation(55,75);
+        
     }
+    
+    private void escenario1()
+    {
+        Soldado soldado = new Soldado();
+        addObject(soldado,606,420);
+    }    
 }
     
 
