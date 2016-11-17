@@ -16,4 +16,6 @@ public class Soldado extends Enemigos
     {
         // Add your action code here.
     }    
+    
+    
 }
