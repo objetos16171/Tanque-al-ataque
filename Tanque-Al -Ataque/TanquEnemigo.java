@@ -1,19 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class BalaEnemiga here.
+ * Write a description of class TanquEnemigo here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class BalaEnemiga extends Enemigos
+public class TanquEnemigo extends Enemigos
 {
     /**
-     * Act - do whatever the BalaEnemiga wants to do. This method is called whenever
+     * Act - do whatever the TanquEnemigo wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        setLocation(getX()-3,getY()+3);
+        // Add your action code here.
     }    
 }

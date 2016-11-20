@@ -13,10 +13,12 @@ public class TanqueWorld extends World
     private int y=0;
     private int j;
     private int i=0;
+    private int l=0;
     private Tanque T1 = new Tanque();
     private Bala B = new Bala();
     private LinkedList <GreenfootImage> imagenes;
     private Button Start,Salir,Help;
+    private SimpleTimer tiempo = new SimpleTimer();
     /**
      * Constructor for objects of class TanqueWorld.
      * 
@@ -24,7 +26,7 @@ public class TanqueWorld extends World
     public TanqueWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(800, 600, 1); 
+        super(800, 800, 1); 
 
         imagenes = new LinkedList();
 
@@ -42,7 +44,6 @@ public class TanqueWorld extends World
 
         menu();
 
-        
     }
     
     public void menu()
@@ -60,6 +61,23 @@ public class TanqueWorld extends World
        
         super.act();
         seleccionar();
+        
+        switch(l)
+        {
+            case 1:
+              if(tiempo.millisElapsed()> 4000)
+               {
+                   Soldado sold = new Soldado();
+                   addObject(sold,500+Greenfoot.getRandomNumber(200),150);
+                   BalaEnemiga BE=new BalaEnemiga();
+                   addObject(BE,sold.getX(),sold.getY());
+                   tiempo.mark();
+               }
+               break;
+               
+        }
+        
+        
     }
     
     /**
@@ -71,12 +89,10 @@ public class TanqueWorld extends World
     {
         setBackground(getImagen(4));
         addObject(T1,390,490);
-        escenario1();
         
-        /*if()
-        {
-            level2();
-        }*/
+      
+        escenario1();
+       l=1;
     }
     
      /**
@@ -114,7 +130,9 @@ public class TanqueWorld extends World
         
         if(Greenfoot.mouseClicked(Start)) {
             removeObjects(getObjects(null));
+            tiempo.mark();
             level1();
+             
         }
         
          if(Greenfoot.mouseClicked(Help)) {
@@ -204,7 +222,7 @@ public class TanqueWorld extends World
         j=j+i;
         return j;
     }    
-
+    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -212,31 +230,33 @@ public class TanqueWorld extends World
     private void escenario1()
     {
         Palmera palmera = new Palmera();
-        addObject(palmera,658,199);
-        addObject(palmera,638,179);
-        addObject(palmera,618,159);
-        addObject(palmera,598,139);
-        addObject(palmera,578,119);
-        addObject(palmera,558,99);
-
-        Soldado soldado = new Soldado();
-        addObject(soldado,400,300);
+        addObject(palmera,Greenfoot.getRandomNumber(800),
+        Greenfoot.getRandomNumber(600));
+        
+       
+        
+        
+        
 
         Casa1 casa12 = new Casa1();
         addObject(casa12,751,343);
 
         arbusto arbusto = new arbusto();
-        addObject(arbusto,510,282);
+        addObject(arbusto,Greenfoot.getRandomNumber(800),
+        Greenfoot.getRandomNumber(600));
+        
 
-        Casa2 casa2 = new Casa2();
-        addObject(casa2,635,106);
+        Casa2 casa = new Casa2();
+        addObject(casa,635,106);
 
         
-    }
+    } 
+    
+     
     
     private void escenario2()
     {
-        Soldado soldado = new Soldado();
-        addObject(soldado,606,420);
+        //Soldado soldado = new Soldado();
+        //addObject(soldado,606,420);
     }    
 }

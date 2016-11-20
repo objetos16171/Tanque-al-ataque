@@ -14,10 +14,10 @@ public class arbusto extends Objeto
      */
     public void act() 
     {
-         if(Greenfoot.isKeyDown("up")){
+     if(Greenfoot.isKeyDown("up")){
         setLocation(getX(),getY()+5);}
        
-        if( getY()== 599 )
+     if( getY()== 799 )
         {
             setLocation(Greenfoot.getRandomNumber(200),0);
             removeTouching(arbusto.class);

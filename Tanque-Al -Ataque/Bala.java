@@ -28,21 +28,14 @@ public class Bala extends Actor
             break;
             case 3:setLocation(getX(),getY()-5);
             break;
-        }
-        
-        if(getX()==0||getY()==0||getX()==800){
-           removeTouching(Bala.class);
-        
-        }                                   
+        }                                  
         
         Mata();
     }
     
     public void Mata()
     {
-        
-    
-         if(isTouching(Soldado.class))
+       if(isTouching(Soldado.class))
         {
             removeTouching(Bala.class);
             removeTouching(Soldado.class);
@@ -50,7 +43,6 @@ public class Bala extends Actor
         else if(isTouching(Torreta.class))
         {
             removeTouching(Torreta.class);
-            
         }
     }   
         

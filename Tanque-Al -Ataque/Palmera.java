@@ -16,11 +16,17 @@ public class Palmera extends Objeto
     {
        if(Greenfoot.isKeyDown("up")){
         setLocation(getX(),getY()+5);}
-       
-        if( getY()== 599 )
+       e1();
+    } 
+    
+    public void e1()
+    {
+        if( getY()== 799 )
         {
-            setLocation(400 +Greenfoot.getRandomNumber(200),0);
+            setLocation(Greenfoot.getRandomNumber(800),0);
             removeTouching(Palmera.class);
-    }    
-   }
+        }
+    }
 }
+   
+
