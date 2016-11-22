@@ -1,6 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.LinkedList;//Crea una lista Enlazada
 import java.lang.Class;
+import java.util.ArrayList;
 /**
  * Write a description of class TanqueWorld here.
  * 
@@ -16,11 +17,13 @@ public class TanqueWorld extends World
     private int l=0;
     private boolean existe = true;
     public Tanque T1 = new Tanque();
-    public Bala B = new Bala();
+    private int cont=1;
+    public Bala B = new Bala(cont);
     private Vidas v = new Vidas();
     private LinkedList <GreenfootImage> imagenes;
     private Button Start,Salir,Help;
     private SimpleTimer tiempo = new SimpleTimer();
+    
     /**
      * Constructor for objects of class TanqueWorld.
      * 
@@ -61,7 +64,7 @@ public class TanqueWorld extends World
     
     public void act()
     {
-       
+        ArrayList<Soldado> ArraySold = new ArrayList();
         super.act();
         seleccionar(); 
         if(vida==0)
@@ -73,13 +76,24 @@ public class TanqueWorld extends World
             case 1:
               if(tiempo.millisElapsed()> 4000)
                {
-                   Soldado sold = new Soldado();
-                
-                   addObject(sold,500+Greenfoot.getRandomNumber(200),150);
-                   juego();
+                   if(cont<=10){
+                   Soldado sold = new Soldado(cont);
+                   ArraySold.add(sold);                   
+                   cont++;
+                }
+                for(Soldado s: ArraySold)
+                {
+                    addObject(s,500+Greenfoot.getRandomNumber(200),150);
+                    
+                }    
+                juego();
                    tiempo.mark();
                 }
+                break;
+              case 2:
+              
                break;
+               
             }
         }
         
@@ -113,8 +127,11 @@ public class TanqueWorld extends World
     
     public void level2()
     {
+        removeObjects(getObjects(null));
+        
         setBackground(getImagen(4));
-        addObject(T1,390,500); 
+        addObject(T1,390,490);
+        
         escenario2();
     }
     
@@ -142,6 +159,7 @@ public class TanqueWorld extends World
             removeObjects(getObjects(null));
             tiempo.mark();
             level1();
+            
              
         }
         
@@ -195,6 +213,10 @@ public class TanqueWorld extends World
     {
         
         addObject(B,T1.getX(),T1.getY()-100);
+        if( B.Mata()== 10)
+               {
+                   level2();
+                }
         
     }
    /**
@@ -271,7 +293,6 @@ public class TanqueWorld extends World
     
     private void escenario2()
     {
-        //Soldado soldado = new Soldado();
-        //addObject(soldado,606,420);
+      escenario1();
     }    
 }
