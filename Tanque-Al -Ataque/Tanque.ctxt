@@ -10,4 +10,6 @@ comment2.text=\r\n\ Este\ metodo\ hace\ mover\ al\ Tanque\ al\ igual\ que\ lo\ h
 comment3.params=
 comment3.target=void\ Dispara()
 comment3.text=\r\n\ este\ metodo\ es\ el\ encargado\ de\ hacer\ dipoarar\ el\ metodo\r\n
-numComments=4
+comment4.params=vida\ ex
+comment4.target=int\ recibeDa\u00F1o(int,\ boolean)
+numComments=5

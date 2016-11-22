@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Soldado extends Enemigos
 {
-    
+    private SimpleTimer tiempo = new SimpleTimer();
     
     /**
      * Act - do whatever the Soldado wants to do. This method is called whenever
@@ -16,20 +16,21 @@ public class Soldado extends Enemigos
      */
     public void act() 
     {
-     if(Greenfoot.isKeyDown("up")){
-        setLocation(getX(),getY()+5);
-        
-    }
-        
-    if( getY()== 799 )
-    {
-      setLocation(550 + Greenfoot.getRandomNumber(250),0);
-      removeTouching(Soldado.class);
-    }  
+        TanqueWorld mundo = (TanqueWorld) getWorld();
+        if(Greenfoot.isKeyDown("up")){
+            setLocation(getX(),getY()+5);
+        }
     
-    
-  
-    
-    
+        if( getY()== 799 )
+        {
+            setLocation(550 + Greenfoot.getRandomNumber(250),0);
+            removeTouching(Soldado.class);
+        }  
+        if(tiempo.millisElapsed()> 800)
+               {
+                   BalaEnemiga BE = new BalaEnemiga();
+                   mundo.addObject(BE,getX(),getY());
+                   tiempo.mark();
+                }
     }
 }

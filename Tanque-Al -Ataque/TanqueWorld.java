@@ -12,10 +12,12 @@ public class TanqueWorld extends World
     private int x=0;
     private int y=0;
     private int j;
-    private int i=0;
+    private int i=0,vida = 4;;
     private int l=0;
-    private Tanque T1 = new Tanque();
-    private Bala B = new Bala();
+    private boolean existe = true;
+    public Tanque T1 = new Tanque();
+    public Bala B = new Bala();
+    private Vidas v = new Vidas();
     private LinkedList <GreenfootImage> imagenes;
     private Button Start,Salir,Help;
     private SimpleTimer tiempo = new SimpleTimer();
@@ -56,30 +58,39 @@ public class TanqueWorld extends World
         Greenfoot.setSpeed(47);
 
     }
+    
     public void act()
     {
        
         super.act();
-        seleccionar();
-        
+        seleccionar(); 
+        if(vida==0)
+        {
+            Greenfoot.stop();
+        }
         switch(l)
         {
             case 1:
               if(tiempo.millisElapsed()> 4000)
                {
                    Soldado sold = new Soldado();
+                
                    addObject(sold,500+Greenfoot.getRandomNumber(200),150);
-                   BalaEnemiga BE=new BalaEnemiga();
-                   addObject(BE,sold.getX(),sold.getY());
+                   juego();
                    tiempo.mark();
-               }
+                }
                break;
-               
+            }
         }
         
+    public void juego()
+       {
+        v.eligeVida(vida);
+        showText("Vida: " + vida, 50, 50);
+        vida = T1.recibeDaño(vida,T1Existe());
+          
+        }
         
-    }
-    
     /**
      * Metodo encargado de crear el nivel 1 con
      * el fondo determinado y el actor principal
@@ -90,7 +101,6 @@ public class TanqueWorld extends World
         setBackground(getImagen(4));
         addObject(T1,390,490);
         
-      
         escenario1();
        l=1;
     }
@@ -183,7 +193,9 @@ public class TanqueWorld extends World
     
     public void DisparaT()
     {
+        
         addObject(B,T1.getX(),T1.getY()-100);
+        
     }
    /**
     * los metodos rotation hacen rotar la bala con forme la rotation del 
@@ -252,7 +264,10 @@ public class TanqueWorld extends World
         
     } 
     
-     
+     public boolean T1Existe()
+    {
+        return existe;
+    }
     
     private void escenario2()
     {
