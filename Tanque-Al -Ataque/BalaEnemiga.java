@@ -14,6 +14,12 @@ public class BalaEnemiga extends Enemigos
      */
     public void act() 
     {
+        TanqueWorld mundo = (TanqueWorld) getWorld();
         setLocation(getX()-3,getY()+3);
+        
+        if(isTouching(Tanque.class))
+        {
+            removeTouching(BalaEnemiga.class);
+        }
     }    
 }

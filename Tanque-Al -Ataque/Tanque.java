@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Tanque extends Actor
 {
     private int i=0;
+    public int Vidas=4;
     /**
      * Act - do whatever the Tanque wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -53,6 +54,11 @@ public class Tanque extends Actor
         if(Greenfoot.isKeyDown("z")){
             
             mundo.DisparaT();
+            if(mundo.B.getY()==0)
+            {
+                removeTouching(Bala.class);
+            }  
+
             switch (i)
             {
                 case 1: mundo.Rotation1();
@@ -61,7 +67,23 @@ public class Tanque extends Actor
                 break;
                 case 3: mundo.Rotation3();
             }
+
           }
+    }
+    public int recibeDaño(int vida,boolean ex)
+    {
+        int i;
+        i=vida;
+        if(ex)
+        {
+        if(isTouching(BalaEnemiga.class))
+        {
+            i= vida - 1;
+        }
+        
+      }
+        
+        return i;
     }
     
 }
