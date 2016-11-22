@@ -8,9 +8,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 
 
+
 public class Bala extends Actor
 {
-    
+   int Dead=0;
+   public Bala(int x)
+   {
+       Dead=x;
+    }
+   
     /**
      * Act - do whatever the Bala wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -33,10 +39,11 @@ public class Bala extends Actor
         Mata();
     }
     
-    public void Mata()
+    public int Mata()
     {
        if(isTouching(Soldado.class))
         {
+            Dead++;
             removeTouching(Bala.class);
             removeTouching(Soldado.class);
         }
@@ -44,8 +51,9 @@ public class Bala extends Actor
         {
             removeTouching(Torreta.class);
         }
+        return Dead;
     }   
-        
+       
 }
     
     
