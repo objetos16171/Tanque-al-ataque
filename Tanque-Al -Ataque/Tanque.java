@@ -54,11 +54,8 @@ public class Tanque extends Actor
         if(Greenfoot.isKeyDown("z")){
             
             mundo.DisparaT();
-            if(mundo.B.getY()==0)
-            {
-                removeTouching(Bala.class);
-            }  
-
+            
+            
             switch (i)
             {
                 case 1: mundo.Rotation1();

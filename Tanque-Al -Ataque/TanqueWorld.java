@@ -67,41 +67,56 @@ public class TanqueWorld extends World
         ArrayList<Soldado> ArraySold = new ArrayList();
         super.act();
         seleccionar(); 
-        if(vida==0)
-        {
-            Greenfoot.stop();
-        }
+       
+
+        
         switch(l)
         {
             case 1:
+              
+             
               if(tiempo.millisElapsed()> 4000)
                {
-                   if(cont<=10){
+                  
+               if(cont<=10){
                    Soldado sold = new Soldado(cont);
                    ArraySold.add(sold);                   
                    cont++;
                 }
+                 
                 for(Soldado s: ArraySold)
                 {
                     addObject(s,500+Greenfoot.getRandomNumber(200),150);
                     
                 }    
+               
                 juego();
-                   tiempo.mark();
+                   
+               tiempo.mark();
                 }
-                break;
+               if(cont==10)
+                {
+                  level2();
+                }
+               break;
               case 2:
               
                break;
                
-            }
-        }
+            
+         }
+         if(vida==0)
+          {
+            Greenfoot.stop();
+          }
+    }
         
     public void juego()
        {
         v.eligeVida(vida);
         showText("Vida: " + vida, 50, 50);
         vida = T1.recibeDaño(vida,T1Existe());
+
           
         }
         
@@ -113,10 +128,14 @@ public class TanqueWorld extends World
     public void level1()
     {
         setBackground(getImagen(4));
+        
         addObject(T1,390,490);
         
         escenario1();
+        
        l=1;
+    
+       
     }
     
      /**
@@ -128,11 +147,14 @@ public class TanqueWorld extends World
     public void level2()
     {
         removeObjects(getObjects(null));
+
         
         setBackground(getImagen(4));
         addObject(T1,390,490);
+       
         
         escenario2();
+        l=2;
     }
     
      public void Help()
@@ -211,14 +233,14 @@ public class TanqueWorld extends World
     
     public void DisparaT()
     {
-        
+       
         addObject(B,T1.getX(),T1.getY()-100);
-        if( B.Mata()== 10)
-               {
-                   level2();
-                }
-        
+ 
+  
     }
+    
+    
+    
    /**
     * los metodos rotation hacen rotar la bala con forme la rotation del 
     * tanque
@@ -282,7 +304,8 @@ public class TanqueWorld extends World
 
         Casa2 casa = new Casa2();
         addObject(casa,635,106);
-
+        
+         
         
     } 
     
@@ -293,6 +316,7 @@ public class TanqueWorld extends World
     
     private void escenario2()
     {
-      escenario1();
+      Casa1 casa12 = new Casa1();
+        addObject(casa12,400,400);
     }    
 }
