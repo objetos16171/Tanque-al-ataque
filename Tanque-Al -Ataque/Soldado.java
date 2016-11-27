@@ -22,7 +22,9 @@ public class Soldado extends Enemigos
      */
     public void act() 
     {
+        
         TanqueWorld mundo = (TanqueWorld) getWorld();
+        
         if(Greenfoot.isKeyDown("up")){
             setLocation(getX(),getY()+5);
         }
@@ -32,6 +34,8 @@ public class Soldado extends Enemigos
             setLocation(550 + Greenfoot.getRandomNumber(250),0);
             removeTouching(Soldado.class);
         }  
+         
+        
         if(tiempo.millisElapsed()> 800)
                {
                    BalaEnemiga BE = new BalaEnemiga();

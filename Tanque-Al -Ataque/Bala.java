@@ -37,21 +37,26 @@ public class Bala extends Actor
         }                                  
         
         Mata();
+      
+       
+     
     }
-    
-    public int Mata()
+
+   
+
+
+    public void Mata()
     {
        if(isTouching(Soldado.class))
         {
-            Dead++;
-            removeTouching(Bala.class);
             removeTouching(Soldado.class);
         }
         else if(isTouching(Torreta.class))
         {
             removeTouching(Torreta.class);
         }
-        return Dead;
+        
+        
     }   
        
 }
