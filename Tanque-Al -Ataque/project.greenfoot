@@ -2,7 +2,6 @@
 =\=\=\=\=\=\=
 <<<<<<<=HEAD
 >>>>>>>=origin/master
-class.Bala.image=tiburon.png
 class.Bala.superclass=greenfoot.Actor
 class.BalaEnemiga.image=beeper.png
 class.BalaEnemiga.superclass=Enemigos
@@ -36,6 +35,8 @@ class.Vidas.image=vida4.png
 class.Vidas.superclass=greenfoot.Actor
 class.arbusto.image=arbusto12.png
 class.arbusto.superclass=Objeto
+class.itemVida.image=Turkish-flag-eagle-publicdo.png
+class.itemVida.superclass=greenfoot.Actor
 dependency1.from=Bala
 dependency1.to=Soldado
 dependency1.type=UsesDependency
@@ -105,6 +106,30 @@ dependency29.type=UsesDependency
 dependency3.from=Palmera
 dependency3.to=arbusto
 dependency3.type=UsesDependency
+dependency30.from=Tanque
+dependency30.to=itemVida
+dependency30.type=UsesDependency
+dependency31.from=TanqueWorld
+dependency31.to=itemVida
+dependency31.type=UsesDependency
+dependency32.from=Tanque
+dependency32.to=Soldado
+dependency32.type=UsesDependency
+dependency33.from=itemVida
+dependency33.to=Soldado
+dependency33.type=UsesDependency
+dependency34.from=itemVida
+dependency34.to=Tanque
+dependency34.type=UsesDependency
+dependency35.from=Bala
+dependency35.to=Item
+dependency35.type=UsesDependency
+dependency36.from=TanqueWorld
+dependency36.to=Item
+dependency36.type=UsesDependency
+dependency37.from=Tanque
+dependency37.to=Item
+dependency37.type=UsesDependency
 dependency4.from=Casa1
 dependency4.to=arbusto
 dependency4.type=UsesDependency
@@ -127,16 +152,28 @@ editor.fx.0.height=700
 editor.fx.0.width=700
 editor.fx.0.x=0
 editor.fx.0.y=0
+<<<<<<< HEAD
 editor.swing.0.height=744
 editor.swing.0.width=1382
 editor.swing.0.x=-8
 editor.swing.0.y=-8
+=======
+editor.swing.0.height=700
+editor.swing.0.width=701
+editor.swing.0.x=0
+editor.swing.0.y=0
+>>>>>>> origin/master
 mainWindow.height=744
 mainWindow.width=1378
 mainWindow.x=-8
 mainWindow.y=-8
+<<<<<<< HEAD
 package.numDependencies=29
 package.numTargets=19
+=======
+package.numDependencies=37
+package.numTargets=20
+>>>>>>> origin/master
 project.charset=UTF-8
 readme.height=58
 readme.name=@README
@@ -171,45 +208,75 @@ target11.width=80
 target11.x=120
 target11.y=370
 target12.height=50
+<<<<<<< HEAD
 target12.name=Button
+=======
+target12.name=itemVida
+>>>>>>> origin/master
 target12.naviview.expanded=true
 target12.showInterface=false
 target12.type=ClassTarget
 target12.typeParameters=
 target12.width=80
 target12.x=190
+<<<<<<< HEAD
 target12.y=250
 target13.height=50
 target13.name=Soldado
+=======
+target12.y=430
+target13.height=50
+target13.name=Button
+>>>>>>> origin/master
 target13.naviview.expanded=true
 target13.showInterface=false
 target13.type=ClassTarget
 target13.typeParameters=
 target13.width=80
 target13.x=190
-target13.y=130
+target13.y=250
 target14.height=50
+<<<<<<< HEAD
 target14.name=Casa1
+=======
+target14.name=Soldado
+target14.naviview.expanded=true
+>>>>>>> origin/master
 target14.showInterface=false
 target14.type=ClassTarget
 target14.typeParameters=
 target14.width=80
+<<<<<<< HEAD
 target14.x=180
 target14.y=70
 target15.height=50
 target15.name=Enemigos
+=======
+target14.x=190
+target14.y=130
+target15.height=50
+target15.name=Casa1
+>>>>>>> origin/master
 target15.showInterface=false
 target15.type=ClassTarget
 target15.typeParameters=
 target15.width=80
+<<<<<<< HEAD
 target15.x=10
 target15.y=130
 target16.height=50
 target16.name=Casa2
+=======
+target15.x=180
+target15.y=70
+target16.height=50
+target16.name=Enemigos
+>>>>>>> origin/master
 target16.showInterface=false
 target16.type=ClassTarget
 target16.typeParameters=
 target16.width=80
+<<<<<<< HEAD
 target16.x=100
 target16.y=130
 target17.height=50
@@ -228,14 +295,40 @@ target18.typeParameters=
 target18.width=80
 target18.x=190
 target18.y=190
+=======
+target16.x=10
+target16.y=130
+target17.height=50
+target17.name=Casa2
+target17.showInterface=false
+target17.type=ClassTarget
+target17.typeParameters=
+target17.width=80
+target17.x=100
+target17.y=130
+target18.height=50
+target18.name=BalaEnemiga
+target18.showInterface=false
+target18.type=ClassTarget
+target18.typeParameters=
+target18.width=100
+target18.x=10
+target18.y=310
+>>>>>>> origin/master
 target19.height=50
-target19.name=TanquEnemigo
+target19.name=Palmera
 target19.showInterface=false
 target19.type=ClassTarget
 target19.typeParameters=
+<<<<<<< HEAD
 target19.width=110
 target19.x=120
 target19.y=310
+=======
+target19.width=80
+target19.x=190
+target19.y=190
+>>>>>>> origin/master
 target2.height=50
 target2.name=JefeFinal
 target2.showInterface=false
@@ -244,6 +337,14 @@ target2.typeParameters=
 target2.width=80
 target2.x=200
 target2.y=10
+target20.height=50
+target20.name=TanquEnemigo
+target20.showInterface=false
+target20.type=ClassTarget
+target20.typeParameters=
+target20.width=110
+target20.x=120
+target20.y=310
 target3.height=50
 target3.name=SimpleTimer
 target3.showInterface=false

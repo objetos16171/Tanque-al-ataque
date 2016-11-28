@@ -43,6 +43,7 @@ public class Soldado extends Enemigos
                    tiempo.mark();
                 }
     }
+    
     public int GetId()
     {
        return Id; 

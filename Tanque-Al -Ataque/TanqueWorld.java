@@ -2,6 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.LinkedList;//Crea una lista Enlazada
 import java.lang.Class;
 import java.util.ArrayList;
+import java.lang.Object;
 /**
  * Write a description of class TanqueWorld here.
  * 
@@ -10,19 +11,25 @@ import java.util.ArrayList;
  */
 public class TanqueWorld extends World
 {
-    private int x=0;
+    
     private int y=0;
     private int j;
-    private int i=0,vida = 4;;
+    private int i=0,vida = 4;
     private int l=0;
     private boolean existe = true;
     public Tanque T1 = new Tanque();
     private int cont=1;
-    public Bala B = new Bala(cont);
+    private int contM1=0;
+    private int cont2=1;
+    private int contM2=0;
+    public Bala B = new Bala();
     private Vidas v = new Vidas();
+    public itemVida ITvida = new itemVida();
+    public Item it = new Item();
     private LinkedList <GreenfootImage> imagenes;
     private Button Start,Salir,Help;
     private SimpleTimer tiempo = new SimpleTimer();
+    private GreenfootSound Sonido= new GreenfootSound("intro.mp3");
     
     /**
      * Constructor for objects of class TanqueWorld.
@@ -42,7 +49,8 @@ public class TanqueWorld extends World
         imagenes.add(new GreenfootImage("Start.png")); //2
         imagenes.add(new GreenfootImage("Salir.png"));   //3
         imagenes.add(new GreenfootImage("corkboard.jpg")); //4
-
+        imagenes.add(new GreenfootImage("News.png")); 
+        
         Start = new Button(getImagen(2));
         Help = new Button(getImagen(1));
         Salir = new Button(getImagen(3));
@@ -61,29 +69,30 @@ public class TanqueWorld extends World
         Greenfoot.setSpeed(47);
 
     }
-    
+   
     public void act()
     {
         ArrayList<Soldado> ArraySold = new ArrayList();
         super.act();
         seleccionar(); 
        
-
-        
+       
         switch(l)
         {
             case 1:
+            
               
-             
-              if(tiempo.millisElapsed()> 4000)
+              if(tiempo.millisElapsed()> 6000)
                {
                   
-               if(cont<=10){
+               if(cont<=11){
                    Soldado sold = new Soldado(cont);
-                   ArraySold.add(sold);                   
+                   
+                   ArraySold.add(sold); 
                    cont++;
                 }
                  
+                
                 for(Soldado s: ArraySold)
                 {
                     addObject(s,500+Greenfoot.getRandomNumber(200),150);
@@ -91,17 +100,67 @@ public class TanqueWorld extends World
                 }    
                
                 juego();
-                   
+                  contM1++; 
                tiempo.mark();
+               
+               
                 }
-               if(cont==10)
+              
+                if(contM1==12)
                 {
                   level2();
                 }
-               break;
-              case 2:
+                
+                if(contM1==3||contM1 ==9)
+                {
+                 addObject(ITvida,20+Greenfoot.getRandomNumber(760),0);
+                }
+                
+                if(contM1==5)
+                {
+                 addObject(it,20+Greenfoot.getRandomNumber(760),0);
+                }
+                     break;
               
+<<<<<<< HEAD
               
+=======
+               case 2:
+                       if(tiempo.millisElapsed()> 3000)
+                       {
+                  
+                         if(cont2<=15){
+                           Soldado sold2 = new Soldado(cont2);
+                           ArraySold.add(sold2);                   
+                           cont2++;
+                        }
+                
+                 
+                          for(Soldado s2: ArraySold)
+                          {
+                            addObject(s2,500+Greenfoot.getRandomNumber(200),150);
+                    
+                          }    
+               
+                           juego();
+                           contM2++;
+                           tiempo.mark();
+                      }
+                      
+                      if(contM2==20)
+                      {
+                        level3();
+                      }
+                
+                      if(contM2==8||contM2 ==16)
+                      {
+                        addObject(ITvida,20+Greenfoot.getRandomNumber(760),0);
+                      }
+                       break;
+               
+               case 3:
+               
+>>>>>>> origin/master
                break;
                
             
@@ -157,6 +216,20 @@ public class TanqueWorld extends World
         escenario2();
         l=2;
     }
+    public void level3()
+    {
+        removeObjects(getObjects(null));
+
+        
+        setBackground(getImagen(4));
+        addObject(T1,390,490);
+       
+        
+        escenario3();
+        l=3;
+        
+    }
+    
     
      public void Help()
     {
@@ -180,6 +253,8 @@ public class TanqueWorld extends World
         
         if(Greenfoot.mouseClicked(Start)) {
             removeObjects(getObjects(null));
+            Sonido.stop();
+            Greenfoot.playSound("war.mp3");
             tiempo.mark();
             level1();
             
@@ -309,15 +384,26 @@ public class TanqueWorld extends World
          
         
     } 
-    
+    private void escenario2()
+    {
+      Casa1 casa12 = new Casa1();
+        addObject(casa12,400,400);
+    }  
+    private void escenario3()
+    {
+      Palmera pal2 = new Palmera();
+        addObject(pal2,400,400);
+    }  
+     
+      
      public boolean T1Existe()
     {
         return existe;
     }
     
-    private void escenario2()
+    public void started()
     {
-      Casa1 casa12 = new Casa1();
-        addObject(casa12,400,400);
-    }    
+      Sonido.play();
+      
+    }
 }

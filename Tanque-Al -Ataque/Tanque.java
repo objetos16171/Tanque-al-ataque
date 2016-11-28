@@ -43,17 +43,23 @@ public class Tanque extends Actor
            //setLocation(getX(),getY()-3);
         }
         
+        cambiabala();
         
     }
     /**
      * este metodo es el encargado de hacer dipoarar el metodo
      */
-    public void Dispara()
+    public int Dispara()
     {
+        int dead=0;
          TanqueWorld mundo = (TanqueWorld) getWorld();
+         Bala B= new Bala();
         if(Greenfoot.isKeyDown("z")){
             
             mundo.DisparaT();
+          
+            
+            //Greenfoot.playSound("eating.wav");
             
             
             switch (i)
@@ -66,6 +72,7 @@ public class Tanque extends Actor
             }
 
           }
+          return dead;
     }
     public int recibeDaño(int vida,boolean ex)
     {
@@ -78,9 +85,22 @@ public class Tanque extends Actor
             i= vida - 1;
         }
         
+        if(isTouching(itemVida.class))
+        {
+            i= vida+1;
+            removeTouching(itemVida.class);
+        }
+        
       }
         
         return i;
     }
-    
+     public void cambiabala()
+    {
+      Item it = new Item();
+      if(isTouching(Item.class)){
+        it.setImage("tiburon.png");
+         removeTouching(Item.class);
+        }
+    }
 }

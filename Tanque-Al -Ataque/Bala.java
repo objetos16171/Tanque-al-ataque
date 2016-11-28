@@ -11,11 +11,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Bala extends Actor
 {
-   int Dead=0;
-   public Bala(int x)
-   {
-       Dead=x;
-    }
+   
    
     /**
      * Act - do whatever the Bala wants to do. This method is called whenever
@@ -41,22 +37,21 @@ public class Bala extends Actor
        
      
     }
-
    
-
-
     public void Mata()
     {
+        
        if(isTouching(Soldado.class))
         {
+            
             removeTouching(Soldado.class);
+            
         }
         else if(isTouching(Torreta.class))
         {
             removeTouching(Torreta.class);
         }
-        
-        
+         
     }   
        
 }
