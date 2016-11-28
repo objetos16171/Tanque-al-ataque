@@ -1,5 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
+ 
+
 /**
  * Write a description of class Tanque here.
  * 
@@ -8,6 +10,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Tanque extends Actor
 {
+    
     private int i=0;
     public int Vidas=3;
     /**
@@ -97,9 +100,9 @@ public class Tanque extends Actor
     }
      public void cambiabala()
     {
-      Item it = new Item();
+      Bala B = new Bala();
       if(isTouching(Item.class)){
-        it.setImage("tiburon.png");
+        B.cambiaImagen();
          removeTouching(Item.class);
         }
     }

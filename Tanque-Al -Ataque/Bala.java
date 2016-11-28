@@ -1,4 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.lang.Object;
 
 /**
  * Write a description of class Bala here.
@@ -11,7 +12,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Bala extends Actor
 {
-   
+   private GreenfootImage SimaB= new GreenfootImage("tiburon.png");
    
     /**
      * Act - do whatever the Bala wants to do. This method is called whenever
@@ -33,7 +34,11 @@ public class Bala extends Actor
         }                                  
         
         Mata();
-      
+        Tanque T = new Tanque();
+      if(isTouching(Item.class)){
+        cambiaImagen();
+         removeTouching(Item.class);
+        }
        
      
     }
@@ -53,6 +58,11 @@ public class Bala extends Actor
         }
          
     }   
+    
+    public void cambiaImagen()
+    {
+       setImage(SimaB);
+    }
        
 }
     
