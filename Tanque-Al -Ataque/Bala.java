@@ -34,7 +34,7 @@ public class Bala extends Actor
         }                                  
         
         Mata();
-        Tanque T = new Tanque();
+       
       if(isTouching(Item.class)){
         cambiaImagen();
          removeTouching(Item.class);
