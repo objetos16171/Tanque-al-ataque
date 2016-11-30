@@ -13,6 +13,7 @@ public class Tanque extends Actor
     
     private int i=0;
     public int Vidas=3;
+    public boolean Obs = true;
     /**
      * Act - do whatever the Tanque wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -28,10 +29,9 @@ public class Tanque extends Actor
      */
     public void Muevete()
     {
-        TanqueWorld mundo = (TanqueWorld) getWorld();
-        if(Greenfoot.isKeyDown("left")){
+       if(Greenfoot.isKeyDown("left")){
           setRotation(-45);
-          
+          Obs=true;
           i=2;
           setLocation(getX()-3,getY());
         }
@@ -40,12 +40,14 @@ public class Tanque extends Actor
            i=1;
            setLocation(getX()+3,getY());
         } 
-        if(Greenfoot.isKeyDown("up")){
-           setRotation(0);
-           i=3;
-           //setLocation(getX(),getY()-3);
-        }
-        
+            if(Obs)
+            {
+                if(Greenfoot.isKeyDown("up")){
+                    setRotation(0);
+                    i=3;
+                    //setLocation(getX(),getY()-3);
+            }
+        }   
         cambiabala();
         
     }
@@ -79,8 +81,21 @@ public class Tanque extends Actor
     }
     public int recibeDaño(int vida,boolean ex)
     {
-        int i;
+         int i;
         i=vida;
+        if(isTouching(arbusto.class))
+        {
+            Obs=false;
+        }
+         if(isTouching(Casa1.class))
+        {
+            Obs=false;
+        }
+         if(isTouching(Casa2.class))
+        {
+            Obs=false;
+        }
+         
         if(ex)
         {
         if(isTouching(BalaEnemiga.class))

@@ -10,6 +10,7 @@ public class Soldado extends Enemigos
 {
     private SimpleTimer tiempo = new SimpleTimer();
     private int Id;
+    boolean Obs;
     
     public Soldado(int x)
     {
@@ -23,13 +24,22 @@ public class Soldado extends Enemigos
     public void act() 
     {
         
-        TanqueWorld mundo = (TanqueWorld) getWorld();
+      TanqueWorld mundo = (TanqueWorld) getWorld();
         
-        if(Greenfoot.isKeyDown("up")){
+        if(isTouching(Tanque.class))
+        {
+            Obs=false;
+        }
+        else
+        {Obs=true;}
+        if(Obs)
+        {
+          if(Greenfoot.isKeyDown("up")){
             setLocation(getX(),getY()+5);
+          }
         }
     
-        if( getY()== 799 )
+        if( getY()== 649 )
         {
             setLocation(550 + Greenfoot.getRandomNumber(250),0);
             removeTouching(Soldado.class);
@@ -38,7 +48,7 @@ public class Soldado extends Enemigos
         
         if(tiempo.millisElapsed()> 800)
                {
-                   BalaEnemiga BE = new BalaEnemiga();
+                   BalaEnemiga BE = new BalaEnemiga(0);
                    mundo.addObject(BE,getX(),getY());
                    tiempo.mark();
                 }

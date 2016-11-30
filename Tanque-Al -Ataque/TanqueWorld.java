@@ -38,7 +38,7 @@ public class TanqueWorld extends World
     public TanqueWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(800, 800, 1); 
+        super(800, 650, 1); 
 
         imagenes = new LinkedList();
 
@@ -123,12 +123,14 @@ public class TanqueWorld extends World
                      break;
               
 
-               case 2:
+                 case 2:
                        if(tiempo.millisElapsed()> 3000)
                        {
                   
                          if(cont2<=15){
                            Soldado sold2 = new Soldado(cont2);
+                           Torreta Torr= new Torreta();
+                           addObject(Torr,Greenfoot.getRandomNumber(80),Greenfoot.getRandomNumber(200));
                            ArraySold.add(sold2);                   
                            cont2++;
                         }
@@ -145,7 +147,7 @@ public class TanqueWorld extends World
                            tiempo.mark();
                       }
                       
-                      if(contM2==20)
+                      if(contM2==15)
                       {
                         level3();
                       }
@@ -156,22 +158,24 @@ public class TanqueWorld extends World
                       }
                        break;
                
-               
-               
+               case 3:
+
+                        break;          
 
                               
             
          }
-         if(vida==0)
-          {
-            Greenfoot.stop();
-          }
+            if(vida==0)
+            {
+                Greenfoot.stop();
+            }
     }
         
     public void juego()
        {
         v.eligeVida(vida);
         showText("Vida: " + vida, 50, 50);
+        showText("Nivel: " + l, 50, 20);
         vida = T1.recibeDaño(vida,T1Existe());
 
           
@@ -363,11 +367,7 @@ public class TanqueWorld extends World
         Greenfoot.getRandomNumber(600));
         
        
-        
-        
-        
-
-        Casa1 casa12 = new Casa1();
+       Casa1 casa12 = new Casa1();
         addObject(casa12,751,343);
 
         arbusto arbusto = new arbusto();
@@ -383,13 +383,40 @@ public class TanqueWorld extends World
     } 
     private void escenario2()
     {
-      Casa1 casa12 = new Casa1();
-        addObject(casa12,400,400);
+      Palmera palmera = new Palmera();
+        addObject(palmera,Greenfoot.getRandomNumber(800),
+        Greenfoot.getRandomNumber(600));       
+       
+        
+        Casa1 casa12 = new Casa1();
+        addObject(casa12,751,343);
+
+        arbusto arbusto = new arbusto();
+        addObject(arbusto,Greenfoot.getRandomNumber(800),
+        Greenfoot.getRandomNumber(600));
+        
+
+        Casa2 casa = new Casa2();
+        addObject(casa,635,106);
     }  
     private void escenario3()
     {
-      Palmera pal2 = new Palmera();
-        addObject(pal2,400,400);
+      
+        Palmera palmera = new Palmera();
+        addObject(palmera,Greenfoot.getRandomNumber(800),
+        Greenfoot.getRandomNumber(600));
+       
+        
+        Casa1 casa12 = new Casa1();
+        addObject(casa12,751,343);
+
+        arbusto arbusto = new arbusto();
+        addObject(arbusto,Greenfoot.getRandomNumber(800),
+        Greenfoot.getRandomNumber(600));
+        
+
+        Casa2 casa = new Casa2();
+        addObject(casa,635,106);
     }  
      
       
