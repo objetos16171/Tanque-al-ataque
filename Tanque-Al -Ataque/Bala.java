@@ -52,19 +52,32 @@ public class Bala extends Actor
             removeTouching(Soldado.class);
             
         }
-        else if(isTouching(Torreta.class))
-        {
+        else{ 
+        if(isTouching(Torreta.class)){
+        
             removeTouching(Torreta.class);
+            }
+            else
+            { 
+               if(isTouching(TanquEnemigo.class)){
+        
+                 removeTouching(TanquEnemigo.class); 
+             }
+    
+            }
         }
-         
-    }   
+    }
+           
     
     public void cambiaImagen()
     {
        setImage(SimaB);
     }
-       
 }
+       
+ 
     
-    
-    
+ 
+
+
+   

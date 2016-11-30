@@ -40,7 +40,7 @@ public class Torreta extends Enemigos
         }  
          
         
-        if(tiempo.millisElapsed()> 2000)
+        if(tiempo.millisElapsed()> 2050)
                {
                    BalaEnemiga BE = new BalaEnemiga(1);
                    mundo.addObject(BE,getX(),getY());

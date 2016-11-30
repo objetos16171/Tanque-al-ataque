@@ -22,6 +22,8 @@ public class TanqueWorld extends World
     private int contM1=0;
     private int cont2=1;
     private int contM2=0;
+    private int cont3=0;
+    private int contM3=0;
     public Bala B = new Bala();
     private Vidas v = new Vidas();
     public itemVida ITvida = new itemVida();
@@ -159,6 +161,34 @@ public class TanqueWorld extends World
                        break;
                
                case 3:
+                if(tiempo.millisElapsed()> 3000)
+                       {
+                  
+                         if(cont3<=15){
+                           Soldado sold2 = new Soldado(cont2);
+                           Torreta Torr= new Torreta();
+                           addObject(Torr,Greenfoot.getRandomNumber(80),Greenfoot.getRandomNumber(200));
+                           TanquEnemigo tan1 = new TanquEnemigo();
+                           addObject(tan1,Greenfoot.getRandomNumber(250),Greenfoot.getRandomNumber(400));                          
+                           ArraySold.add(sold2);                   
+                           cont3++;
+                        }
+                
+                 
+                          for(Soldado s3: ArraySold)
+                          {
+                            addObject(s3,500+Greenfoot.getRandomNumber(200),150);
+                    
+                          }    
+               
+                           juego();
+                           contM3++;
+                           tiempo.mark();
+                      }
+                      if(contM3==8||contM3 ==16)
+                      {
+                        addObject(ITvida,20+Greenfoot.getRandomNumber(760),0);
+                      }
 
                         break;          
 
