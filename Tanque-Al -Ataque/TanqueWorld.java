@@ -122,6 +122,7 @@ public class TanqueWorld extends World
                 }
                      break;
               
+
                case 2:
                        if(tiempo.millisElapsed()> 3000)
                        {
@@ -155,10 +156,10 @@ public class TanqueWorld extends World
                       }
                        break;
                
-               case 3:
                
-               break;
                
+
+                              
             
          }
          if(vida==0)
