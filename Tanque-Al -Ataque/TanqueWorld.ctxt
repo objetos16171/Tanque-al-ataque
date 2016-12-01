@@ -39,15 +39,9 @@ comment21.target=void\ escenarioJ()
 comment22.params=
 comment22.target=boolean\ T1Existe()
 comment23.params=
-<<<<<<< HEAD
-comment23.target=boolean\ T1Existe()
+comment23.target=boolean\ jefeExiste()
 comment24.params=
-comment24.target=boolean\ jefeExiste()
-comment25.params=
-comment25.target=void\ started()
-=======
-comment23.target=void\ started()
->>>>>>> origin/master
+comment24.target=void\ started()
 comment3.params=
 comment3.target=void\ act()
 comment4.params=
@@ -63,11 +57,6 @@ comment7.target=void\ level3()
 comment8.params=
 comment8.target=void\ LEVELFINAL()
 comment9.params=
-<<<<<<< HEAD
-comment9.target=void\ Help()
-numComments=26
-=======
 comment9.target=void\ seleccionar()
 comment9.text=\r\nMetodo\ encargado\ de\ controlar\ los\ eventos\ de\ \r\nlos\ botones\ que\ se\ encuentran\ en\ la\ pantalla\ de\ menu\ \r\nse\ crean\ los\ botones\ con\ los\ personajes\ para\ cuando\ sean\ seleccionado\ \r\ncambie\ la\ imagen\ de\ nuestros\ personajes\r\n
-numComments=24
->>>>>>> origin/master
+numComments=25

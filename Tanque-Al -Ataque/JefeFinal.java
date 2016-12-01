@@ -42,7 +42,7 @@ public class JefeFinal extends Enemigos
                
     }
     
-    public void RDaño(int vida,boolean x )
+    public int RDaño(int vida,boolean x )
     {
          int i;
         i=vida;
@@ -52,6 +52,7 @@ public class JefeFinal extends Enemigos
         {
             i= vida - 1;
         }
-        }  
+        } 
+        return i;
     }
 }

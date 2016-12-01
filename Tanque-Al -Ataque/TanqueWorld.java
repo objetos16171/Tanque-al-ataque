@@ -15,7 +15,7 @@ public class TanqueWorld extends World
     private int y=0;
     private int j;
     private int i=0,vida = 5;
-    private int vJefe = 3;
+    private int vJefe = 1;
     private int l=0;
     private boolean existe = true;
     public Tanque T1 = new Tanque();
@@ -31,6 +31,7 @@ public class TanqueWorld extends World
     private Vidas v = new Vidas();
     public itemVida ITvida = new itemVida();
     public Item it = new Item();
+    JefeFinal jefe = new JefeFinal();
     private LinkedList <GreenfootImage> imagenes;
     private Button Start,Salir,Help;
     private SimpleTimer tiempo = new SimpleTimer();
@@ -54,13 +55,12 @@ public class TanqueWorld extends World
         imagenes.add(new GreenfootImage("Start.png")); //2
         imagenes.add(new GreenfootImage("Salir.png"));   //3
         imagenes.add(new GreenfootImage("corkboard.jpg")); //4
-<<<<<<< HEAD
+
         imagenes.add(new GreenfootImage("News.png"));//5
         imagenes.add(new GreenfootImage("GO.jpg")); //6
         imagenes.add(new GreenfootImage("Win.jpg")); //7
-=======
-        imagenes.add(new GreenfootImage("Ayuda.jpg")); 
->>>>>>> origin/master
+
+        imagenes.add(new GreenfootImage("Ayuda.jpg")); //8
         
         Start = new Button(getImagen(2));
         Help = new Button(getImagen(1));
@@ -117,7 +117,8 @@ public class TanqueWorld extends World
               
                 if(contM1==12)
                 {
-                  level2();
+                  //level2();
+                  LEVELFINAL();
                 }
                 
                 
@@ -216,16 +217,13 @@ public class TanqueWorld extends World
                         }
 
 
-                       if(contM3==15)
-                      {
-                        LEVELFINAL();
-                      }
+                       
 
 
                         break;
                         
-                        case 4:
-                       
+                        case 4:                         
+                        
                         juego();
                         tiempo.mark();                   
                      
@@ -240,7 +238,8 @@ public class TanqueWorld extends World
                 removeObjects(getObjects(null));
                 setBackground(getImagen(6));
                 Greenfoot.stop();
-            }
+            }            
+             
             if(vJefe==0)
             {
                removeObjects(getObjects(null));
@@ -254,8 +253,7 @@ public class TanqueWorld extends World
         v.eligeVida(vida);
         showText("Vida: " + vida, 50, 50);
         showText("Nivel: " + l, 50, 20);
-        vida = T1.recibeDaño(vida,T1Existe());
-        //vJefe = jefe.RDaño(vJefe,jefeExiste());
+        vida = T1.recibeDaño(vida,T1Existe());        
 
           
         }
@@ -313,12 +311,11 @@ public class TanqueWorld extends World
     public void LEVELFINAL()
     {
         removeObjects(getObjects(null));
-        addObject(T1,390,490);
-        Greenfoot.setSpeed(20);
-        JefeFinal jefe = new JefeFinal();
+        addObject(T1,390,490);        
         addObject(jefe,400,100);
         escenarioJ();
         l=4;
+        //vJefe = jefe.RDaño(vJefe, jefeExiste());
     }  
     
     
@@ -350,7 +347,7 @@ public class TanqueWorld extends World
         
          if(Greenfoot.mouseClicked(Help)) {
             removeObjects(getObjects(null));
-            setBackground(getImagen(5));
+            setBackground(getImagen(8));
             addObject(Start, 200, 50);
             
         }

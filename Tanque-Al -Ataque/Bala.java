@@ -57,11 +57,13 @@ public class Bala extends Actor
    
     public void Mata()
     {
-         if(isTouching(JefeFinal.class))
+        
+        if(isTouching(JefeFinal.class))
         {
-           removeTouching(JefeFinal.class);
+           removeTouching(JefeFinal.class);         
+           
         }
-       if(isTouching(Soldado.class))
+        if(isTouching(Soldado.class))
         {
             
             removeTouching(Soldado.class);
@@ -77,13 +79,11 @@ public class Bala extends Actor
                if(isTouching(TanquEnemigo.class)){
         
                  removeTouching(TanquEnemigo.class); 
-             }
-             
+             }           
     
             }
         }
-    }
-    
+    }  
     
            
     

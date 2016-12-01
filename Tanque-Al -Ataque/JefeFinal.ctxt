@@ -5,5 +5,5 @@ comment1.params=
 comment1.target=void\ act()
 comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ JefeFinal\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment2.params=vida\ x
-comment2.target=void\ RDa\u00F1o(int,\ boolean)
+comment2.target=int\ RDa\u00F1o(int,\ boolean)
 numComments=3
