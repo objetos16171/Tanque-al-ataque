@@ -23,6 +23,7 @@ public class TanqueWorld extends World
     private int contM1=0;
     private int cont2=1;
     private int contM2=0;
+    private int contM4 =0;
     private int cont3=0;
     private int contM3=0;
     public Bala B = new Bala();
@@ -117,7 +118,7 @@ public class TanqueWorld extends World
                 
                 if(contM1==3||contM1 ==9)
                 {
-                 addObject(ITvida,20+Greenfoot.getRandomNumber(760),0);
+                 addObject(ITvida,20+Greenfoot.getRandomNumber(250),0);
                 }
                 
                 
@@ -134,7 +135,8 @@ public class TanqueWorld extends World
                            ArraySold.add(sold2); 
                            if(c/2==0)
                         {
-                           addObject(Torr,Greenfoot.getRandomNumber(80),Greenfoot.getRandomNumber(200));
+                           
+                            addObject(Torr,Greenfoot.getRandomNumber(80),Greenfoot.getRandomNumber(200));
                            tiempo.mark();
                         }
                            cont2++;
@@ -153,7 +155,11 @@ public class TanqueWorld extends World
                            tiempo.mark();
                       }
                       
+<<<<<<< HEAD
 
+=======
+                      
+>>>>>>> origin/master
                       
                       if(contM2==15)
                       {
@@ -162,7 +168,7 @@ public class TanqueWorld extends World
                 
                       if(contM2==8||contM2 ==16)
                       {
-                        addObject(ITvida,20+Greenfoot.getRandomNumber(760),0);
+                        addObject(ITvida,250+Greenfoot.getRandomNumber(250),0);
                       }
                       
                       if(contM1==5)
@@ -198,8 +204,9 @@ public class TanqueWorld extends World
                       }
                       if(contM3==8||contM3 ==16)
                       {
-                        addObject(ITvida,20+Greenfoot.getRandomNumber(760),0);
+                        addObject(ITvida,250+Greenfoot.getRandomNumber(250),0);
                       }
+<<<<<<< HEAD
 
                        if(contM3==15)
                       {
@@ -207,23 +214,27 @@ public class TanqueWorld extends World
 
                         }
 
+=======
+>>>>>>> origin/master
                        if(contM3==15)
                       {
                         LEVELFINAL();
                       }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 
                         break;
                         
                         case 4:
-                        
-                        JefeFinal jefe = new JefeFinal();
-                        addObject(jefe,400,100);
-                        
+                       
                         juego();
-                        tiempo.mark();
+                        tiempo.mark();                     
+                     
                         
                         break;
+                    
 
                               
             
@@ -297,10 +308,10 @@ public class TanqueWorld extends World
     public void LEVELFINAL()
     {
         removeObjects(getObjects(null));
-        setBackground(getImagen(4));
         addObject(T1,390,490);
-        
-        
+        Greenfoot.setSpeed(47);
+        JefeFinal jefe = new JefeFinal();
+        addObject(jefe,400,100);
         escenarioJ();
         l=4;
     }  
