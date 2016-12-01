@@ -29,13 +29,13 @@ public class Tanque extends Actor
      */
     public void Muevete()
     {
-       if(Greenfoot.isKeyDown("left")){
+       if(Greenfoot.isKeyDown("left") && getX()>=250){
           setRotation(-45);
           Obs=true;
           i=2;
           setLocation(getX()-3,getY());
         }
-        if(Greenfoot.isKeyDown("right")){
+        if(Greenfoot.isKeyDown("right")&& getX()<=500){
            setRotation(45);
            i=1;
            setLocation(getX()+3,getY());

@@ -15,7 +15,7 @@ public class itemVida extends Actor
     public void act() 
     {
           if(Greenfoot.isKeyDown("up")){
-        setLocation(getX(),getY()+5);}
+           setLocation(getX(),getY()+5);}
        
     }    
 }

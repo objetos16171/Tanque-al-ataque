@@ -169,7 +169,7 @@ public class TanqueWorld extends World
                            Torreta Torr= new Torreta();
                            addObject(Torr,Greenfoot.getRandomNumber(80),Greenfoot.getRandomNumber(200));
                            TanquEnemigo tan1 = new TanquEnemigo();
-                           addObject(tan1,Greenfoot.getRandomNumber(250),Greenfoot.getRandomNumber(400));                          
+                           addObject(tan1,200+Greenfoot.getRandomNumber(250),Greenfoot.getRandomNumber(400));                          
                            ArraySold.add(sold2);                   
                            cont3++;
                         }
@@ -393,16 +393,16 @@ public class TanqueWorld extends World
     private void escenario1()
     {
         Palmera palmera = new Palmera();
-        addObject(palmera,Greenfoot.getRandomNumber(800),
-        Greenfoot.getRandomNumber(600));
+        addObject(palmera,600+Greenfoot.getRandomNumber(200),
+        Greenfoot.getRandomNumber(200));
         
        
        Casa1 casa12 = new Casa1();
         addObject(casa12,751,343);
 
         arbusto arbusto = new arbusto();
-        addObject(arbusto,Greenfoot.getRandomNumber(800),
-        Greenfoot.getRandomNumber(600));
+        addObject(arbusto,Greenfoot.getRandomNumber(600),
+        Greenfoot.getRandomNumber(200));
         
 
         Casa2 casa = new Casa2();
@@ -414,16 +414,16 @@ public class TanqueWorld extends World
     private void escenario2()
     {
       Palmera palmera = new Palmera();
-        addObject(palmera,Greenfoot.getRandomNumber(800),
-        Greenfoot.getRandomNumber(600));       
-       
+        addObject(palmera,600+Greenfoot.getRandomNumber(200),
+        Greenfoot.getRandomNumber(200));
         
-        Casa1 casa12 = new Casa1();
+       
+       Casa1 casa12 = new Casa1();
         addObject(casa12,751,343);
 
         arbusto arbusto = new arbusto();
-        addObject(arbusto,Greenfoot.getRandomNumber(800),
-        Greenfoot.getRandomNumber(600));
+        addObject(arbusto,Greenfoot.getRandomNumber(600),
+        Greenfoot.getRandomNumber(200));
         
 
         Casa2 casa = new Casa2();
@@ -433,16 +433,16 @@ public class TanqueWorld extends World
     {
       
         Palmera palmera = new Palmera();
-        addObject(palmera,Greenfoot.getRandomNumber(800),
-        Greenfoot.getRandomNumber(600));
-       
+        addObject(palmera,600+Greenfoot.getRandomNumber(200),
+        Greenfoot.getRandomNumber(200));
         
-        Casa1 casa12 = new Casa1();
+       
+       Casa1 casa12 = new Casa1();
         addObject(casa12,751,343);
 
         arbusto arbusto = new arbusto();
-        addObject(arbusto,Greenfoot.getRandomNumber(800),
-        Greenfoot.getRandomNumber(600));
+        addObject(arbusto,Greenfoot.getRandomNumber(600),
+        Greenfoot.getRandomNumber(200));
         
 
         Casa2 casa = new Casa2();
