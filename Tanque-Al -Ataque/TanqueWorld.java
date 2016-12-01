@@ -54,9 +54,13 @@ public class TanqueWorld extends World
         imagenes.add(new GreenfootImage("Start.png")); //2
         imagenes.add(new GreenfootImage("Salir.png"));   //3
         imagenes.add(new GreenfootImage("corkboard.jpg")); //4
+<<<<<<< HEAD
         imagenes.add(new GreenfootImage("News.png"));//5
         imagenes.add(new GreenfootImage("GO.jpg")); //6
         imagenes.add(new GreenfootImage("Win.jpg")); //7
+=======
+        imagenes.add(new GreenfootImage("Ayuda.jpg")); 
+>>>>>>> origin/master
         
         Start = new Button(getImagen(2));
         Help = new Button(getImagen(1));
@@ -156,7 +160,7 @@ public class TanqueWorld extends World
                            tiempo.mark();
                       }
                       
-                      
+
                       
                       if(contM2==15)
                       {
@@ -168,7 +172,7 @@ public class TanqueWorld extends World
                         addObject(ITvida,250+Greenfoot.getRandomNumber(250),0);
                       }
                       
-                      if(contM1==5)
+                      if(contM2==5)
                 {
                  addObject(it,250+Greenfoot.getRandomNumber(760),0);
                 }
@@ -203,10 +207,20 @@ public class TanqueWorld extends World
                       {
                         addObject(ITvida,250+Greenfoot.getRandomNumber(250),0);
                       }
+
+
+                       if(contM3==15)
+                      {
+                        LEVELFINAL();
+
+                        }
+
+
                        if(contM3==15)
                       {
                         LEVELFINAL();
                       }
+
 
                         break;
                         
@@ -307,11 +321,7 @@ public class TanqueWorld extends World
         l=4;
     }  
     
-     public void Help()
-    {
-        removeObjects(getObjects(null));
-        GreenfootImage bag = new GreenfootImage(getImagen(4));
-    }
+    
     
     /**
      *Metodo encargado de controlar los eventos de 
@@ -340,7 +350,9 @@ public class TanqueWorld extends World
         
          if(Greenfoot.mouseClicked(Help)) {
             removeObjects(getObjects(null));
-            Help();
+            setBackground(getImagen(5));
+            addObject(Start, 200, 50);
+            
         }
     }
     
