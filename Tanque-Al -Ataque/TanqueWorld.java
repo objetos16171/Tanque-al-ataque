@@ -22,6 +22,8 @@ public class TanqueWorld extends World
     private int contM1=0;
     private int cont2=1;
     private int contM2=0;
+    private int cont3=0;
+    private int contM3=0;
     public Bala B = new Bala();
     private Vidas v = new Vidas();
     public itemVida ITvida = new itemVida();
@@ -38,7 +40,7 @@ public class TanqueWorld extends World
     public TanqueWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(800, 800, 1); 
+        super(800, 650, 1); 
 
         imagenes = new LinkedList();
 
@@ -111,24 +113,23 @@ public class TanqueWorld extends World
                   level2();
                 }
                 
+                
                 if(contM1==3||contM1 ==9)
                 {
                  addObject(ITvida,20+Greenfoot.getRandomNumber(760),0);
                 }
                 
-                if(contM1==5)
-                {
-                 addObject(it,20+Greenfoot.getRandomNumber(760),0);
-                }
+                
                      break;
               
 
-               case 2:
+                 case 2:
                        if(tiempo.millisElapsed()> 3000)
                        {
                   
                          if(cont2<=15){
                            Soldado sold2 = new Soldado(cont2);
+                           
                            ArraySold.add(sold2);                   
                            cont2++;
                         }
@@ -145,7 +146,14 @@ public class TanqueWorld extends World
                            tiempo.mark();
                       }
                       
-                      if(contM2==20)
+                      if(tiempo.millisElapsed()> 5000)
+                      {
+                          Torreta Torr= new Torreta();
+                           addObject(Torr,Greenfoot.getRandomNumber(80),Greenfoot.getRandomNumber(200));
+                           tiempo.mark();
+                        }
+                      
+                      if(contM2==15)
                       {
                         level3();
                       }
@@ -154,24 +162,59 @@ public class TanqueWorld extends World
                       {
                         addObject(ITvida,20+Greenfoot.getRandomNumber(760),0);
                       }
+                      
+                      if(contM1==5)
+                {
+                 addObject(it,20+Greenfoot.getRandomNumber(760),0);
+                }
                        break;
                
+               case 3:
+                if(tiempo.millisElapsed()> 3000)
+                       {
+                  
+                         if(cont3<=15){
+                           Soldado sold2 = new Soldado(cont2);
+                           Torreta Torr= new Torreta();
+                           addObject(Torr,Greenfoot.getRandomNumber(80),Greenfoot.getRandomNumber(200));
+                           TanquEnemigo tan1 = new TanquEnemigo();
+                           addObject(tan1,Greenfoot.getRandomNumber(250),Greenfoot.getRandomNumber(400));                          
+                           ArraySold.add(sold2);                   
+                           cont3++;
+                        }
+                
+                 
+                          for(Soldado s3: ArraySold)
+                          {
+                            addObject(s3,500+Greenfoot.getRandomNumber(200),150);
+                    
+                          }    
                
-               
+                           juego();
+                           contM3++;
+                           tiempo.mark();
+                      }
+                      if(contM3==8||contM3 ==16)
+                      {
+                        addObject(ITvida,20+Greenfoot.getRandomNumber(760),0);
+                      }
+
+                        break;          
 
                               
             
          }
-         if(vida==0)
-          {
-            Greenfoot.stop();
-          }
+            if(vida==0)
+            {
+                Greenfoot.stop();
+            }
     }
         
     public void juego()
        {
         v.eligeVida(vida);
         showText("Vida: " + vida, 50, 50);
+        showText("Nivel: " + l, 50, 20);
         vida = T1.recibeDaño(vida,T1Existe());
 
           
@@ -227,6 +270,15 @@ public class TanqueWorld extends World
         
     }
     
+    public void LEVELFINAL()
+    {
+        removeObjects(getObjects(null));
+        setBackground(getImagen(4));
+        addObject(T1,390,490);
+        
+        
+        escenarioJ();
+    }  
     
      public void Help()
     {
@@ -363,11 +415,7 @@ public class TanqueWorld extends World
         Greenfoot.getRandomNumber(600));
         
        
-        
-        
-        
-
-        Casa1 casa12 = new Casa1();
+       Casa1 casa12 = new Casa1();
         addObject(casa12,751,343);
 
         arbusto arbusto = new arbusto();
@@ -383,15 +431,61 @@ public class TanqueWorld extends World
     } 
     private void escenario2()
     {
-      Casa1 casa12 = new Casa1();
-        addObject(casa12,400,400);
+      Palmera palmera = new Palmera();
+        addObject(palmera,Greenfoot.getRandomNumber(800),
+        Greenfoot.getRandomNumber(600));       
+       
+        
+        Casa1 casa12 = new Casa1();
+        addObject(casa12,751,343);
+
+        arbusto arbusto = new arbusto();
+        addObject(arbusto,Greenfoot.getRandomNumber(800),
+        Greenfoot.getRandomNumber(600));
+        
+
+        Casa2 casa = new Casa2();
+        addObject(casa,635,106);
     }  
     private void escenario3()
     {
-      Palmera pal2 = new Palmera();
-        addObject(pal2,400,400);
+      
+        Palmera palmera = new Palmera();
+        addObject(palmera,Greenfoot.getRandomNumber(800),
+        Greenfoot.getRandomNumber(600));
+       
+        
+        Casa1 casa12 = new Casa1();
+        addObject(casa12,751,343);
+
+        arbusto arbusto = new arbusto();
+        addObject(arbusto,Greenfoot.getRandomNumber(800),
+        Greenfoot.getRandomNumber(600));
+        
+
+        Casa2 casa = new Casa2();
+        addObject(casa,635,106);
     }  
      
+    public void escenarioJ()
+    {
+         Palmera palmera = new Palmera();
+        addObject(palmera,Greenfoot.getRandomNumber(800),
+        Greenfoot.getRandomNumber(600));
+       
+        
+        Casa1 casa12 = new Casa1();
+        addObject(casa12,751,343);
+
+        arbusto arbusto = new arbusto();
+        addObject(arbusto,Greenfoot.getRandomNumber(800),
+        Greenfoot.getRandomNumber(600));
+        
+
+        Casa2 casa = new Casa2();
+        addObject(casa,635,106);
+        
+    } 
       
      public boolean T1Existe()
     {

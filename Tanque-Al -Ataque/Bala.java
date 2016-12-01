@@ -40,7 +40,12 @@ public class Bala extends Actor
          removeTouching(Item.class);
         }
        
-     
+        
+       if(getY()==0)
+       {
+           
+        setLocation(800,0);
+      }
     }
    
     public void Mata()
@@ -52,19 +57,34 @@ public class Bala extends Actor
             removeTouching(Soldado.class);
             
         }
-        else if(isTouching(Torreta.class))
-        {
+        else{ 
+        if(isTouching(Torreta.class)){
+        
             removeTouching(Torreta.class);
+            }
+            else
+            { 
+               if(isTouching(TanquEnemigo.class)){
+        
+                 removeTouching(TanquEnemigo.class); 
+             }
+    
+            }
         }
-         
-    }   
+    }
+    
+    
+           
     
     public void cambiaImagen()
     {
        setImage(SimaB);
     }
-       
 }
+       
+ 
     
-    
-    
+ 
+
+
+   

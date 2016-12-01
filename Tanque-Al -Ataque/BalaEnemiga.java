@@ -8,18 +8,31 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class BalaEnemiga extends Enemigos
 {
+   int Per;
     /**
      * Act - do whatever the BalaEnemiga wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public BalaEnemiga(int per)
+    {
+        Per=per;
+    }
     public void act() 
     {
         TanqueWorld mundo = (TanqueWorld) getWorld();
-        setLocation(getX()-3,getY()+3);
-        
+        Dispara(Per);
         if(isTouching(Tanque.class))
         {
             removeTouching(BalaEnemiga.class);
         }
+    }    
+    public void Dispara(int Disp)
+    {
+        if(Disp==0)
+        {
+           setLocation(getX()-3,getY()+3);
+        }
+        if(Disp==1)
+        setLocation(getX()+3,getY()+3);
     }    
 }
