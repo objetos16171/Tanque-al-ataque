@@ -25,6 +25,11 @@ public class BalaEnemiga extends Enemigos
         {
             removeTouching(BalaEnemiga.class);
         }
+        
+        if(getY()==800)
+        {
+            
+        }
     }    
     public void Dispara(int Disp)
     {
@@ -37,4 +42,6 @@ public class BalaEnemiga extends Enemigos
         if(Disp==3)
         setLocation(getX(),getY()+3);
     }    
+    
+    
 }

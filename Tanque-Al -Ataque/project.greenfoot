@@ -1,4 +1,15 @@
 #Greenfoot properties
+<<<<<<< HEAD
+#Wed Nov 30 19:30:50 CST 2016
+target16.name=Enemigos
+dependency35.to=Item
+editor.swing.0.y=0
+editor.swing.0.x=0
+class.Palmera.image=planta1.png
+target2.name=JefeFinal
+target9.name=Vidas
+dependency56.to=Tanque
+=======
 #Wed Nov 30 19:30:45 CST 2016
 target16.name=Enemigos
 dependency35.to=Item
@@ -8,6 +19,7 @@ class.Palmera.image=planta1.png
 target2.name=JefeFinal
 target9.name=Vidas
 dependency56.to=BalaEnemiga
+>>>>>>> origin/master
 dependency11.type=UsesDependency
 dependency18.type=UsesDependency
 dependency15.from=TanqueWorld
@@ -24,7 +36,11 @@ target15.height=50
 target7.type=ClassTarget
 target15.typeParameters=
 target11.width=80
+<<<<<<< HEAD
+dependency50.to=Torreta
+=======
 dependency50.to=Tanque
+>>>>>>> origin/master
 dependency25.to=Vidas
 dependency32.type=UsesDependency
 target1.typeParameters=
@@ -32,12 +48,21 @@ dependency39.type=UsesDependency
 dependency36.from=TanqueWorld
 target20.showInterface=false
 dependency2.to=Torreta
+<<<<<<< HEAD
+dependency46.to=Tanque
+class.Casa1.image=Newcaasa.png
+dependency1.type=UsesDependency
+target16.y=130
+dependency41.type=UsesDependency
+target16.x=10
+=======
 dependency46.to=SimpleTimer
 class.Casa1.image=Newcaasa.png
 dependency1.type=UsesDependency
 target16.y=130
 target16.x=10
 dependency41.type=UsesDependency
+>>>>>>> origin/master
 dependency8.type=UsesDependency
 dependency5.from=Casa2
 dependency48.type=UsesDependency
@@ -46,6 +71,22 @@ class.Casa2.superclass=Objeto
 target12.y=430
 target12.x=190
 class.Item.superclass=greenfoot.Actor
+<<<<<<< HEAD
+dependency55.type=UsesDependency
+dependency52.from=Bala
+target18.width=100
+editor.fx.0.height=700
+project.charset=UTF-8
+dependency40.to=Casa2
+target12.typeParameters=
+class.Item.image=escudaso.png
+dependency15.to=arbusto
+target15.name=Casa1
+target5.height=50
+target1.name=Tanque
+target11.naviview.expanded=true
+version=2.8.0
+=======
 target18.width=100
 dependency55.type=UsesDependency
 dependency52.from=Bala
@@ -60,6 +101,7 @@ target15.name=Casa1
 target1.name=Tanque
 version=2.8.0
 target11.naviview.expanded=true
+>>>>>>> origin/master
 target8.name=Objeto
 dependency36.to=Item
 class.itemVida.image=Turkish-flag-eagle-publicdo.png
@@ -87,6 +129,18 @@ target3.x=10
 >>>>>>>=origin/master
 target7.typeParameters=
 dependency51.to=TanquEnemigo
+<<<<<<< HEAD
+dependency26.to=TanqueWorld
+target8.height=50
+class.arbusto.image=arbusto12.png
+mainWindow.y=-8
+mainWindow.x=-8
+target12.showInterface=false
+target3.showInterface=false
+target17.typeParameters=
+dependency3.to=arbusto
+dependency47.to=Casa2
+=======
 target8.height=50
 dependency26.to=TanqueWorld
 class.arbusto.image=arbusto12.png
@@ -97,6 +151,7 @@ target12.showInterface=false
 target17.typeParameters=
 dependency3.to=arbusto
 dependency47.to=Tanque
+>>>>>>> origin/master
 target1.width=80
 dependency40.type=UsesDependency
 dependency7.type=UsesDependency
@@ -109,10 +164,17 @@ dependency54.type=UsesDependency
 dependency51.from=TanqueWorld
 target14.name=Soldado
 target9.height=50
+<<<<<<< HEAD
+target11.showInterface=false
+target2.showInterface=false
+target7.name=Bala
+dependency41.to=Tanque
+=======
 target2.showInterface=false
 target11.showInterface=false
 target7.name=Bala
 dependency41.to=Casa2
+>>>>>>> origin/master
 dependency16.to=Casa2
 dependency13.from=TanqueWorld
 dependency16.type=UsesDependency
@@ -125,6 +187,15 @@ dependency23.type=UsesDependency
 dependency20.from=Soldado
 target19.type=ClassTarget
 target4.width=80
+<<<<<<< HEAD
+dependency27.from=BalaEnemiga
+target18.showInterface=false
+target9.showInterface=false
+target10.showInterface=false
+target1.showInterface=false
+class.Torreta.image=Torreta.png
+target5.type=ClassTarget
+=======
 target9.showInterface=false
 target18.showInterface=false
 dependency27.from=BalaEnemiga
@@ -132,6 +203,7 @@ target10.showInterface=false
 target1.showInterface=false
 target5.type=ClassTarget
 class.Torreta.image=Torreta.png
+>>>>>>> origin/master
 dependency10.to=Bala
 target19.y=190
 target19.x=190
@@ -149,8 +221,13 @@ target11.y=370
 target11.x=120
 readme.height=58
 dependency52.to=TanquEnemigo
+<<<<<<< HEAD
+target17.showInterface=false
+target8.showInterface=false
+=======
 target8.showInterface=false
 target17.showInterface=false
+>>>>>>> origin/master
 dependency27.to=TanqueWorld
 dependency3.from=Palmera
 target11.typeParameters=
@@ -159,11 +236,19 @@ dependency43.from=Torreta
 dependency46.type=UsesDependency
 dependency4.to=arbusto
 target9.typeParameters=
+<<<<<<< HEAD
+dependency48.to=Tanque
+class.Objeto.superclass=greenfoot.Actor
+target16.height=50
+dependency53.type=UsesDependency
+dependency50.from=TanqueWorld
+=======
 dependency48.to=Casa2
 class.Objeto.superclass=greenfoot.Actor
 target16.height=50
 dependency53.type=UsesDependency
 dependency50.from=Casa1
+>>>>>>> origin/master
 target7.width=80
 <<<<<<<=HEAD
 target13.name=Button
@@ -173,11 +258,31 @@ target16.showInterface=false
 class.Palmera.superclass=Objeto
 target20.name=TanquEnemigo
 dependency15.type=UsesDependency
+<<<<<<< HEAD
+dependency42.to=TanqueWorld
+=======
 dependency42.to=Tanque
+>>>>>>> origin/master
 dependency12.from=TanqueWorld
 target14.width=80
 dependency17.to=Palmera
 class.MyWorld.superclass=greenfoot.World
+<<<<<<< HEAD
+dependency19.from=TanqueWorld
+target6.y=250
+target6.x=10
+target10.width=80
+target2.y=10
+target11.type=ClassTarget
+target2.x=200
+dependency22.type=UsesDependency
+dependency38.to=arbusto
+target18.type=ClassTarget
+target17.height=50
+dependency29.type=UsesDependency
+dependency26.from=Soldado
+target6.typeParameters=
+=======
 target6.y=250
 dependency19.from=TanqueWorld
 target6.x=10
@@ -192,6 +297,7 @@ target17.height=50
 target6.typeParameters=
 dependency29.type=UsesDependency
 dependency26.from=Soldado
+>>>>>>> origin/master
 target4.type=ClassTarget
 class.Tanque.image=14996533_10210652582172327_1792932913_n.png
 class.BalaEnemiga.image=beeper.png
@@ -208,12 +314,21 @@ target20.typeParameters=
 dependency5.type=UsesDependency
 dependency2.from=Bala
 class.BalaEnemiga.superclass=Enemigos
+<<<<<<< HEAD
+dependency45.type=UsesDependency
+dependency42.from=Torreta
+target17.width=80
+dependency9.from=TanqueWorld
+dependency53.to=SimpleTimer
+dependency49.from=Casa1
+=======
 target17.width=80
 dependency45.type=UsesDependency
 dependency42.from=Soldado
 dependency9.from=TanqueWorld
 dependency53.to=TanqueWorld
 dependency49.from=Casa2
+>>>>>>> origin/master
 target10.height=50
 dependency28.to=Tanque
 target13.naviview.expanded=true
@@ -237,7 +352,11 @@ target14.naviview.expanded=true
 target18.y=310
 dependency18.from=Soldado
 target18.x=10
+<<<<<<< HEAD
+dependency43.to=BalaEnemiga
+=======
 dependency43.to=TanqueWorld
+>>>>>>> origin/master
 target14.y=130
 target14.x=190
 target10.type=ClassTarget
@@ -250,11 +369,19 @@ dependency25.from=TanqueWorld
 target10.y=430
 target3.type=ClassTarget
 target10.x=100
+<<<<<<< HEAD
+dependency39.to=Casa1
+readme.name=@README
+dependency35.type=UsesDependency
+dependency32.from=Tanque
+target16.width=80
+=======
 dependency39.to=arbusto
 readme.name=@README
 target16.width=80
 dependency35.type=UsesDependency
 dependency32.from=Tanque
+>>>>>>> origin/master
 class.Enemigos.superclass=greenfoot.Actor
 dependency39.from=Tanque
 target10.typeParameters=
@@ -266,6 +393,16 @@ class.Counter.superclass=greenfoot.Actor
 dependency4.type=UsesDependency
 dependency1.from=Bala
 dependency44.type=UsesDependency
+<<<<<<< HEAD
+dependency41.from=Soldado
+dependency33.to=Soldado
+dependency8.from=Bala
+dependency48.from=Casa2
+target14.height=50
+target9.y=430
+target9.x=10
+dependency54.to=TanqueWorld
+=======
 dependency41.from=Tanque
 dependency33.to=Soldado
 dependency8.from=Bala
@@ -274,6 +411,7 @@ target14.height=50
 target9.y=430
 target9.x=10
 dependency54.to=Tanque
+>>>>>>> origin/master
 dependency51.type=UsesDependency
 dependency29.to=Bala
 dependency55.from=TanquEnemigo
@@ -287,17 +425,43 @@ class.JefeFinal.superclass=Enemigos
 dependency6.to=arbusto
 target4.name=Torreta
 target1.y=10
+<<<<<<< HEAD
+target1.x=110
+target19.typeParameters=
+dependency10.from=TanqueWorld
+dependency13.type=UsesDependency
+target5.typeParameters=
+=======
 target19.typeParameters=
 target1.x=110
 target5.typeParameters=
 dependency13.type=UsesDependency
 dependency10.from=TanqueWorld
+>>>>>>> origin/master
 target7.showInterface=false
 target3.width=100
 dependency17.from=Objeto
 dependency23.to=Bala
 dependency20.type=UsesDependency
 target16.type=ClassTarget
+<<<<<<< HEAD
+dependency24.from=Tanque
+dependency27.type=UsesDependency
+target2.type=ClassTarget
+dependency44.to=Tanque
+class.Tanque.superclass=greenfoot.Actor
+target9.type=ClassTarget
+dependency19.to=SimpleTimer
+target4.height=50
+target20.y=310
+dependency31.from=TanqueWorld
+dependency34.type=UsesDependency
+target20.x=120
+editor.swing.0.height=700
+target15.showInterface=false
+target6.showInterface=false
+dependency38.from=Tanque
+=======
 dependency27.type=UsesDependency
 dependency24.from=Tanque
 target2.type=ClassTarget
@@ -314,6 +478,7 @@ editor.swing.0.height=744
 target6.showInterface=false
 target15.showInterface=false
 dependency38.from=TanqueWorld
+>>>>>>> origin/master
 readme.y=10
 readme.x=10
 target10.naviview.expanded=true
@@ -321,8 +486,13 @@ target16.typeParameters=
 target2.typeParameters=
 dependency13.to=Soldado
 dependency3.type=UsesDependency
+<<<<<<< HEAD
+dependency40.from=Tanque
+dependency43.type=UsesDependency
+=======
 dependency43.type=UsesDependency
 dependency40.from=Tanque
+>>>>>>> origin/master
 dependency7.from=Tanque
 target6.width=80
 dependency47.from=Palmera
@@ -330,6 +500,17 @@ readme.width=47
 target20.width=110
 mainWindow.height=744
 target9.naviview.expanded=true
+<<<<<<< HEAD
+editor.swing.0.width=701
+target14.showInterface=false
+target5.showInterface=false
+dependency34.to=Tanque
+target18.height=50
+dependency50.type=UsesDependency
+target2.width=80
+class.TanqueWorld.superclass=greenfoot.World
+class.Bala.image=News.png
+=======
 editor.swing.0.width=1383
 target5.showInterface=false
 target14.showInterface=false
@@ -339,11 +520,41 @@ target2.width=80
 dependency50.type=UsesDependency
 class.Bala.image=News.png
 class.TanqueWorld.superclass=greenfoot.World
+>>>>>>> origin/master
 dependency54.from=TanquEnemigo
 target10.name=Item
 target17.y=130
 target17.x=100
 target17.name=Casa2
+<<<<<<< HEAD
+dependency55.to=BalaEnemiga
+class.arbusto.superclass=Objeto
+target3.name=SimpleTimer
+target13.y=250
+target7.height=50
+target13.x=190
+class.itemVida.superclass=greenfoot.Actor
+dependency7.to=TanqueWorld
+dependency12.type=UsesDependency
+dependency16.from=TanqueWorld
+dependency19.type=UsesDependency
+target13.showInterface=false
+target4.showInterface=false
+target15.type=ClassTarget
+dependency26.type=UsesDependency
+dependency23.from=Tanque
+target11.height=50
+class.JefeFinal.image=14958098_10210650358716742_1076937765_o.png
+target1.type=ClassTarget
+dependency24.to=BalaEnemiga
+target9.width=80
+target8.type=ClassTarget
+dependency1.to=Soldado
+dependency30.from=Tanque
+dependency33.type=UsesDependency
+dependency45.to=SimpleTimer
+target5.width=100
+=======
 dependency55.to=SimpleTimer
 target3.name=SimpleTimer
 class.arbusto.superclass=Objeto
@@ -371,12 +582,23 @@ dependency33.type=UsesDependency
 dependency30.from=Tanque
 target5.width=100
 dependency45.to=Tanque
+>>>>>>> origin/master
 dependency37.from=Tanque
 target8.y=190
 target8.x=100
 target12.width=80
 dependency2.type=UsesDependency
 target4.y=190
+<<<<<<< HEAD
+dependency42.type=UsesDependency
+target4.x=10
+target20.height=50
+target12.height=50
+dependency6.from=Bala
+dependency9.type=UsesDependency
+dependency46.from=Palmera
+dependency49.type=UsesDependency
+=======
 target4.x=10
 dependency42.type=UsesDependency
 target20.height=50
@@ -385,14 +607,24 @@ dependency6.from=Bala
 target12.height=50
 dependency49.type=UsesDependency
 dependency46.from=Torreta
+>>>>>>> origin/master
 world.lastInstantiated=TanqueWorld
 dependency14.to=Casa1
 target18.typeParameters=
 target19.showInterface=false
+<<<<<<< HEAD
+dependency56.type=UsesDependency
+dependency53.from=TanquEnemigo
+target1.height=50
+mainWindow.width=1378
+class.Casa2.image=casa1.png
+target4.typeParameters=
+=======
 dependency53.from=TanquEnemigo
 dependency56.type=UsesDependency
 target1.height=50
 target4.typeParameters=
 class.Casa2.image=casa1.png
 mainWindow.width=1378
+>>>>>>> origin/master
 =\=\=\=\=\=\=

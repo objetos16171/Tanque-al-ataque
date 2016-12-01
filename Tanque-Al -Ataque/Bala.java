@@ -50,6 +50,7 @@ public class Bala extends Actor
        {
            
         setLocation(800,0);
+        removeTouching(Bala.class);
       }
 
     }
