@@ -113,15 +113,13 @@ public class TanqueWorld extends World
                   level2();
                 }
                 
+                
                 if(contM1==3||contM1 ==9)
                 {
                  addObject(ITvida,20+Greenfoot.getRandomNumber(760),0);
                 }
                 
-                if(contM1==5)
-                {
-                 addObject(it,20+Greenfoot.getRandomNumber(760),0);
-                }
+                
                      break;
               
 
@@ -131,8 +129,7 @@ public class TanqueWorld extends World
                   
                          if(cont2<=15){
                            Soldado sold2 = new Soldado(cont2);
-                           Torreta Torr= new Torreta();
-                           addObject(Torr,Greenfoot.getRandomNumber(80),Greenfoot.getRandomNumber(200));
+                           
                            ArraySold.add(sold2);                   
                            cont2++;
                         }
@@ -149,6 +146,13 @@ public class TanqueWorld extends World
                            tiempo.mark();
                       }
                       
+                      if(tiempo.millisElapsed()> 5000)
+                      {
+                          Torreta Torr= new Torreta();
+                           addObject(Torr,Greenfoot.getRandomNumber(80),Greenfoot.getRandomNumber(200));
+                           tiempo.mark();
+                        }
+                      
                       if(contM2==15)
                       {
                         level3();
@@ -158,6 +162,11 @@ public class TanqueWorld extends World
                       {
                         addObject(ITvida,20+Greenfoot.getRandomNumber(760),0);
                       }
+                      
+                      if(contM1==5)
+                {
+                 addObject(it,20+Greenfoot.getRandomNumber(760),0);
+                }
                        break;
                
                case 3:
@@ -261,6 +270,15 @@ public class TanqueWorld extends World
         
     }
     
+    public void LEVELFINAL()
+    {
+        removeObjects(getObjects(null));
+        setBackground(getImagen(4));
+        addObject(T1,390,490);
+        
+        
+        escenarioJ();
+    }  
     
      public void Help()
     {
@@ -449,6 +467,25 @@ public class TanqueWorld extends World
         addObject(casa,635,106);
     }  
      
+    public void escenarioJ()
+    {
+         Palmera palmera = new Palmera();
+        addObject(palmera,Greenfoot.getRandomNumber(800),
+        Greenfoot.getRandomNumber(600));
+       
+        
+        Casa1 casa12 = new Casa1();
+        addObject(casa12,751,343);
+
+        arbusto arbusto = new arbusto();
+        addObject(arbusto,Greenfoot.getRandomNumber(800),
+        Greenfoot.getRandomNumber(600));
+        
+
+        Casa2 casa = new Casa2();
+        addObject(casa,635,106);
+        
+    } 
       
      public boolean T1Existe()
     {

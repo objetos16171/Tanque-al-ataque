@@ -40,7 +40,7 @@ public class TanquEnemigo extends Enemigos
         }  
          
         
-        if(tiempo.millisElapsed()> 2100)
+        if(tiempo.millisElapsed()> 3000)
                {
                    BalaEnemiga BE = new BalaEnemiga(3);
                    mundo.addObject(BE,getX(),getY());
