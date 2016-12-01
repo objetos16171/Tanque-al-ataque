@@ -39,11 +39,11 @@ public class Bala extends Actor
         cambiaImagen();
          removeTouching(Item.class);
         }
-<<<<<<< HEAD
+
        if(getY()==0)
 
        {setLocation(800,0);}
-=======
+
        
         
        if(getY()==0)
@@ -51,7 +51,7 @@ public class Bala extends Actor
            
         setLocation(800,0);
       }
->>>>>>> origin/master
+
     }
    
     public void Mata()

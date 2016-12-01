@@ -14,7 +14,7 @@ public class TanqueWorld extends World
     
     private int y=0;
     private int j;
-    private int i=0,vida = 4;
+    private int i=0,vida = 5;
     private int l=0;
     private boolean existe = true;
     public Tanque T1 = new Tanque();
