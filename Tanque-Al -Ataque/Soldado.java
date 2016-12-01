@@ -46,7 +46,7 @@ public class Soldado extends Enemigos
         }  
          
         
-        if(tiempo.millisElapsed()> 1000)
+        if(tiempo.millisElapsed()> 1500)
                {
                    BalaEnemiga BE = new BalaEnemiga(0);
                    mundo.addObject(BE,getX(),getY());

@@ -157,10 +157,6 @@ public class TanqueWorld extends World
                            tiempo.mark();
                       }
                       
-<<<<<<< HEAD
-                      
-=======
->>>>>>> origin/master
                       
                       if(contM2==15)
                       {
@@ -213,16 +209,12 @@ public class TanqueWorld extends World
                       {
                         addObject(ITvida,20+Greenfoot.getRandomNumber(760),0);
                       }
-<<<<<<< HEAD
+
                        if(contM3==15)
                       {
                         LEVELFINAL();
-=======
-                      if(contM3==17)
-                      {
-                            LEVELFINAL();
->>>>>>> origin/master
-                      }
+
+                        }
 
                         break;
                         

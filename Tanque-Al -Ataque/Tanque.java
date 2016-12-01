@@ -29,13 +29,13 @@ public class Tanque extends Actor
      */
     public void Muevete()
     {
-       if(Greenfoot.isKeyDown("left") && getX()>=250){
+       if(Greenfoot.isKeyDown("left") && getX()>=200){
           setRotation(-45);
           Obs=true;
           i=2;
           setLocation(getX()-3,getY());
         }
-        if(Greenfoot.isKeyDown("right")&& getX()<=500){
+        if(Greenfoot.isKeyDown("right")&& getX()<=550){
            setRotation(45);
            i=1;
            setLocation(getX()+3,getY());
@@ -64,7 +64,7 @@ public class Tanque extends Actor
             mundo.DisparaT();
           
             
-            //Greenfoot.playSound("eating.wav");
+            
             
             
             switch (i)
