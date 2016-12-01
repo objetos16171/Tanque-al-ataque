@@ -33,11 +33,25 @@ public class JefeFinal extends Enemigos
             else
             Mov=true;
         }
-        if(tiempo.millisElapsed()> 1500)
+        if(tiempo.millisElapsed()> 2000)
                {
                    BalaEnemiga BE = new BalaEnemiga(3);
                    mundo.addObject(BE,getX(),getY());
                    tiempo.mark();
                 }
-    }    
+               
+    }
+    
+    public void RDaño(int vida,boolean x )
+    {
+         int i;
+        i=vida;
+        if(x)
+        {
+        if(isTouching(Bala.class))
+        {
+            i= vida - 1;
+        }
+        }  
+    }
 }

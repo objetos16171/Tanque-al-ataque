@@ -62,11 +62,7 @@ public class Tanque extends Actor
         if(Greenfoot.isKeyDown("z")){
             
             mundo.DisparaT();
-          
-            
-            
-            
-            
+
             switch (i)
             {
                 case 1: mundo.Rotation1();
@@ -112,6 +108,7 @@ public class Tanque extends Actor
       }
         
         return i;
+        
     }
      public void cambiabala()
     {
