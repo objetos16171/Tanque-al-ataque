@@ -19,6 +19,7 @@ public class TanqueWorld extends World
     private boolean existe = true;
     public Tanque T1 = new Tanque();
     private int cont=1;
+    private int c =0;
     private int contM1=0;
     private int cont2=1;
     private int contM2=0;
@@ -127,16 +128,17 @@ public class TanqueWorld extends World
                        if(tiempo.millisElapsed()> 3500)
                        {
                   
-                         if(cont2<=15){
+                         if(cont2<=20){
                            Soldado sold2 = new Soldado(cont2); 
                            Torreta Torr= new Torreta();
                            ArraySold.add(sold2); 
-                           if(tiempo.millisElapsed()> 5000)
+                           if(c/2==0)
                         {
-                                                    addObject(Torr,Greenfoot.getRandomNumber(80),Greenfoot.getRandomNumber(200));
+                           addObject(Torr,Greenfoot.getRandomNumber(80),Greenfoot.getRandomNumber(200));
                            tiempo.mark();
                         }
                            cont2++;
+                           c++;
                         }
                 
                  
@@ -145,18 +147,16 @@ public class TanqueWorld extends World
                             addObject(s2,500+Greenfoot.getRandomNumber(200),150);
                     
                           }    
-                            
-                          if(tiempo.millisElapsed()> 5000)
-                      {
-                          Torreta Torr= new Torreta();
-                           addObject(Torr,Greenfoot.getRandomNumber(80),Greenfoot.getRandomNumber(200));
-                           
-                        }
+               
                            juego();
                            contM2++;
                            tiempo.mark();
                       }
                       
+<<<<<<< HEAD
+=======
+                      
+>>>>>>> origin/master
                       
                       if(contM2==15)
                       {
@@ -180,7 +180,8 @@ public class TanqueWorld extends World
                   
                          if(cont3<=15){
                            Soldado sold2 = new Soldado(cont2);
-                           
+                           Torreta Torr= new Torreta();
+                           addObject(Torr,Greenfoot.getRandomNumber(80),Greenfoot.getRandomNumber(200));
                            TanquEnemigo tan1 = new TanquEnemigo();
                            addObject(tan1,200+Greenfoot.getRandomNumber(250),Greenfoot.getRandomNumber(400));                          
                            ArraySold.add(sold2);                   
@@ -193,28 +194,28 @@ public class TanqueWorld extends World
                             addObject(s3,500+Greenfoot.getRandomNumber(200),150);
                     
                           }    
-                            
-                          if(tiempo.millisElapsed()> 5000)
-                        { 
-                            Torreta Torr= new Torreta();
-                           addObject(Torr,Greenfoot.getRandomNumber(80),Greenfoot.getRandomNumber(200));
-                        }
-                          
+               
                            juego();
                            contM3++;
                            tiempo.mark();
                       }
-                      
                       if(contM3==8||contM3 ==16)
                       {
                         addObject(ITvida,20+Greenfoot.getRandomNumber(760),0);
                       }
+<<<<<<< HEAD
 
                        if(contM3==15)
                       {
                         LEVELFINAL();
 
                         }
+=======
+                       if(contM3==15)
+                      {
+                        LEVELFINAL();
+                      }
+>>>>>>> origin/master
 
                         break;
                         
@@ -497,19 +498,21 @@ public class TanqueWorld extends World
      
     public void escenarioJ()
     {
-         Palmera palme = new Palmera();
-        addObject(palme,250,300);
+         Palmera palmera = new Palmera();
+        addObject(palmera,Greenfoot.getRandomNumber(800),
+        Greenfoot.getRandomNumber(600));
        
         
         Casa1 casa12 = new Casa1();
-        addObject(casa12,600,350);
+        addObject(casa12,751,343);
 
         arbusto arbusto = new arbusto();
-        addObject(arbusto,650,400);
+        addObject(arbusto,Greenfoot.getRandomNumber(800),
+        Greenfoot.getRandomNumber(600));
         
 
         Casa2 casa = new Casa2();
-        addObject(casa,150,100);
+        addObject(casa,635,106);
         
     } 
       
