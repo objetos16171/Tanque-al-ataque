@@ -52,7 +52,7 @@ public class TanqueWorld extends World
         imagenes.add(new GreenfootImage("Start.png")); //2
         imagenes.add(new GreenfootImage("Salir.png"));   //3
         imagenes.add(new GreenfootImage("corkboard.jpg")); //4
-        imagenes.add(new GreenfootImage("News.png")); 
+        imagenes.add(new GreenfootImage("Ayuda.jpg")); 
         
         Start = new Button(getImagen(2));
         Help = new Button(getImagen(1));
@@ -153,10 +153,7 @@ public class TanqueWorld extends World
                            tiempo.mark();
                       }
                       
-<<<<<<< HEAD
-=======
-                      
->>>>>>> origin/master
+
                       
                       if(contM2==15)
                       {
@@ -203,19 +200,18 @@ public class TanqueWorld extends World
                       {
                         addObject(ITvida,20+Greenfoot.getRandomNumber(760),0);
                       }
-<<<<<<< HEAD
 
                        if(contM3==15)
                       {
                         LEVELFINAL();
 
                         }
-=======
+
                        if(contM3==15)
                       {
                         LEVELFINAL();
                       }
->>>>>>> origin/master
+
 
                         break;
                         
@@ -309,11 +305,7 @@ public class TanqueWorld extends World
         l=4;
     }  
     
-     public void Help()
-    {
-        removeObjects(getObjects(null));
-        GreenfootImage bag = new GreenfootImage(getImagen(4));
-    }
+    
     
     /**
      *Metodo encargado de controlar los eventos de 
@@ -341,7 +333,9 @@ public class TanqueWorld extends World
         
          if(Greenfoot.mouseClicked(Help)) {
             removeObjects(getObjects(null));
-            Help();
+            setBackground(getImagen(5));
+            addObject(Start, 200, 50);
+            
         }
     }
     
