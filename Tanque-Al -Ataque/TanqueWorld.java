@@ -124,13 +124,18 @@ public class TanqueWorld extends World
               
 
                  case 2:
-                       if(tiempo.millisElapsed()> 3000)
+                       if(tiempo.millisElapsed()> 3500)
                        {
                   
                          if(cont2<=15){
-                           Soldado sold2 = new Soldado(cont2);
-                           
-                           ArraySold.add(sold2);                   
+                           Soldado sold2 = new Soldado(cont2); 
+                           Torreta Torr= new Torreta();
+                           ArraySold.add(sold2); 
+                           if(tiempo.millisElapsed()> 5000)
+                        {
+                                                    addObject(Torr,Greenfoot.getRandomNumber(80),Greenfoot.getRandomNumber(200));
+                           tiempo.mark();
+                        }
                            cont2++;
                         }
                 
@@ -152,6 +157,10 @@ public class TanqueWorld extends World
                            tiempo.mark();
                       }
                       
+<<<<<<< HEAD
+                      
+=======
+>>>>>>> origin/master
                       
                       if(contM2==15)
                       {
@@ -170,7 +179,7 @@ public class TanqueWorld extends World
                        break;
                
                case 3:
-                if(tiempo.millisElapsed()> 3000)
+                if(tiempo.millisElapsed()> 4000)
                        {
                   
                          if(cont3<=15){
@@ -204,12 +213,28 @@ public class TanqueWorld extends World
                       {
                         addObject(ITvida,20+Greenfoot.getRandomNumber(760),0);
                       }
+<<<<<<< HEAD
+                       if(contM3==15)
+                      {
+                        LEVELFINAL();
+=======
                       if(contM3==17)
                       {
                             LEVELFINAL();
+>>>>>>> origin/master
                       }
 
-                        break;          
+                        break;
+                        
+                        case 4:
+                        
+                        JefeFinal jefe = new JefeFinal();
+                        addObject(jefe,400,100);
+                        
+                        juego();
+                        tiempo.mark();
+                        
+                        break;
 
                               
             
@@ -288,6 +313,7 @@ public class TanqueWorld extends World
         
         
         escenarioJ();
+        l=4;
     }  
     
      public void Help()
