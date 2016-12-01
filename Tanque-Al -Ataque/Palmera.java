@@ -34,7 +34,7 @@ public class Palmera extends Objeto
     {
         if( getY()== 649 )
         {
-            setLocation(Greenfoot.getRandomNumber(800),0);
+            setLocation(600+Greenfoot.getRandomNumber(200),0);
             removeTouching(Palmera.class);
         }
     }

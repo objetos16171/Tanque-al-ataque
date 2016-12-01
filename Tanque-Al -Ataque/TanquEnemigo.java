@@ -35,14 +35,14 @@ public class TanquEnemigo extends Enemigos
         }
         if( getY()== 649 )
         {
-            setLocation(550 + Greenfoot.getRandomNumber(250),0);
+            setLocation(50+Greenfoot.getRandomNumber(250),0);
             removeTouching(TanquEnemigo.class);
         }  
          
         
         if(tiempo.millisElapsed()> 3000)
                {
-                   BalaEnemiga BE = new BalaEnemiga(1);
+                   BalaEnemiga BE = new BalaEnemiga(3);
                    mundo.addObject(BE,getX(),getY());
                    tiempo.mark();
                 }

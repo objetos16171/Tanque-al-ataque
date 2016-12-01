@@ -19,7 +19,7 @@ public class arbusto extends Objeto
        
      if( getY()== 649 )
         {
-            setLocation(Greenfoot.getRandomNumber(200),0);
+            setLocation(Greenfoot.getRandomNumber(800),0);
             removeTouching(arbusto.class);
         
     }    

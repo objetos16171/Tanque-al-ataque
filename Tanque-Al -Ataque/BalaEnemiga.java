@@ -39,6 +39,8 @@ public class BalaEnemiga extends Enemigos
         }
         if(Disp==1)
         setLocation(getX()+3,getY()+3);
+        if(Disp==3)
+        setLocation(getX(),getY()+3);
     }    
     
     

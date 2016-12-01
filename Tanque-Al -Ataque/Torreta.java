@@ -35,7 +35,7 @@ public class Torreta extends Enemigos
     
         if( getY()== 649 )
         {
-            setLocation(550 + Greenfoot.getRandomNumber(250),0);
+            setLocation(Greenfoot.getRandomNumber(200),0);
             removeTouching(Torreta.class);
         }  
          
