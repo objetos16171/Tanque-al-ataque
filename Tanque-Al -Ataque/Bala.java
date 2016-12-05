@@ -39,19 +39,18 @@ public class Bala extends Actor
         cambiaImagen();
          removeTouching(Item.class);
         }
+      
+      
+       if(getX()==10||getY()==10||getX()==640)
 
-       if(getY()==0)
-
-       {setLocation(800,0);}
-
-       
+      {  
         
-       if(getY()==0)
-       {
-           
-        setLocation(800,0);
+        setLocation(0,800);
         removeTouching(Bala.class);
+        
       }
+      
+     
 
     }
    

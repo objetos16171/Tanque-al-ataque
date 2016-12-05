@@ -33,9 +33,10 @@ public class TanqueWorld extends World
     public Item it = new Item();
     JefeFinal jefe = new JefeFinal();
     private LinkedList <GreenfootImage> imagenes;
-    private Button Start,Salir,Help;
+    private Button Start,Creditos,Help;
     private SimpleTimer tiempo = new SimpleTimer();
     private GreenfootSound Sonido= new GreenfootSound("intro.mp3");
+    private GreenfootSound Son= new GreenfootSound("war.mp3");
     
     /**
      * Constructor for objects of class TanqueWorld.
@@ -47,24 +48,25 @@ public class TanqueWorld extends World
         super(800, 650, 1); 
 
         imagenes = new LinkedList();
-
         
-        
-        imagenes.add(new GreenfootImage("Menu.jpg"));      //0
+        imagenes.add(new GreenfootImage("Menu.png"));      //0
         imagenes.add(new GreenfootImage("Help.png"));      //1
         imagenes.add(new GreenfootImage("Start.png")); //2
-        imagenes.add(new GreenfootImage("Salir.png"));   //3
+        imagenes.add(new GreenfootImage("Cred.png"));   //3
         imagenes.add(new GreenfootImage("corkboard.jpg")); //4
 
         imagenes.add(new GreenfootImage("News.png"));//5
         imagenes.add(new GreenfootImage("GO.jpg")); //6
         imagenes.add(new GreenfootImage("Win.jpg")); //7
 
-        imagenes.add(new GreenfootImage("Ayuda.jpg")); //8
+        imagenes.add(new GreenfootImage("aiuda.png")); //8
+        imagenes.add(new GreenfootImage("Creditos.png")); //9
+        
+        
         
         Start = new Button(getImagen(2));
         Help = new Button(getImagen(1));
-        Salir = new Button(getImagen(3));
+        Creditos = new Button(getImagen(3));
 
         menu();
 
@@ -75,7 +77,7 @@ public class TanqueWorld extends World
         //removeObjects(getObjects(null));
         setBackground(getImagen(0));
         addObject(Start, 200, 100);
-        addObject(Salir, 400, 100);
+        addObject(Creditos, 400, 100);
         addObject(Help, 600, 100);
         Greenfoot.setSpeed(47);
 
@@ -86,6 +88,7 @@ public class TanqueWorld extends World
         ArrayList<Soldado> ArraySold = new ArrayList();
         super.act();
         seleccionar(); 
+        
        
        
         switch(l)
@@ -269,6 +272,7 @@ public class TanqueWorld extends World
         
         addObject(T1,390,490);
         
+        
         escenario1();
         
        l=1;
@@ -329,15 +333,17 @@ public class TanqueWorld extends World
     public void seleccionar()
     {
         
-        if(Greenfoot.mouseClicked(Salir)) {
+        if(Greenfoot.mouseClicked(Creditos)) {
             removeObjects(getObjects(null));
-            menu();
+            setBackground(getImagen(9));
+            addObject(Start, 650, 50);
+           
         }
         
         if(Greenfoot.mouseClicked(Start)) {
             removeObjects(getObjects(null));
             Sonido.stop();
-            Greenfoot.playSound("war.mp3");
+            Son.playLoop();
             tiempo.mark();
             level1();
             
@@ -537,5 +543,10 @@ public class TanqueWorld extends World
     {
       Sonido.play();
       
+    }
+    public void stop()
+    {
+        Son.stop();
+        
     }
 }

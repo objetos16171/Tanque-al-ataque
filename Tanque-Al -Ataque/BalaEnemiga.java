@@ -26,9 +26,9 @@ public class BalaEnemiga extends Enemigos
             removeTouching(BalaEnemiga.class);
         }
         
-        if(getY()==800)
+        if(getX()==0)
         {
-            
+            removeTouching(BalaEnemiga.class);
         }
     }    
     public void Dispara(int Disp)
