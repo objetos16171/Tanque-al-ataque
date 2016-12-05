@@ -243,7 +243,7 @@ public class TanqueWorld extends World
                 Greenfoot.stop();
             }            
              
-            if(vJefe==0)
+            if(B.JFinal)
             {
                removeObjects(getObjects(null));
                setBackground(getImagen(7));

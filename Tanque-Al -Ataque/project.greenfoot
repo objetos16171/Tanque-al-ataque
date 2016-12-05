@@ -1,7 +1,5 @@
 #Greenfoot project file
-=\=\=\=\=\=\=
-<<<<<<<=HEAD
->>>>>>>=origin/master
+
 class.Bala.image=News.png
 class.Bala.superclass=greenfoot.Actor
 class.BalaEnemiga.image=beeper.png
@@ -237,12 +235,21 @@ editor.fx.0.height=700
 editor.fx.0.width=700
 editor.fx.0.x=0
 editor.fx.0.y=0
+
 editor.swing.0.height=0
 editor.swing.0.width=0
 editor.swing.0.x=0
 editor.swing.0.y=0
 mainWindow.height=744
 mainWindow.width=1378
+
+editor.swing.0.height=700
+editor.swing.0.width=701
+editor.swing.0.x=82
+editor.swing.0.y=11
+mainWindow.height=744
+mainWindow.width=1382
+
 mainWindow.x=-8
 mainWindow.y=-8
 package.numDependencies=65
