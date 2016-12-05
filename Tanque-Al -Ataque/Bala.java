@@ -13,7 +13,7 @@ import java.lang.Object;
 public class Bala extends Actor
 {
    private GreenfootImage SimaB= new GreenfootImage("tiburon.png");
-   
+   public boolean JFinal=false;
     /**
      * Act - do whatever the Bala wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -39,18 +39,19 @@ public class Bala extends Actor
         cambiaImagen();
          removeTouching(Item.class);
         }
-      
-      
-       if(getX()==10||getY()==10||getX()==640)
 
-      {  
+       if(getY()==0)
+
+       {setLocation(800,0);}
+
+       
         
-        setLocation(0,800);
+       if(getY()==0)
+       {
+           
+        setLocation(800,0);
         removeTouching(Bala.class);
-        
       }
-      
-     
 
     }
    
@@ -60,7 +61,7 @@ public class Bala extends Actor
         if(isTouching(JefeFinal.class))
         {
            removeTouching(JefeFinal.class);         
-           
+           JFinal=true;
         }
         if(isTouching(Soldado.class))
         {
